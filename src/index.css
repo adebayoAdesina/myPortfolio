@@ -32,6 +32,17 @@
   }
 }
 
+.bg-line {
+  position: relative;
+}
+.bg-line::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 3px;
+  background-color: #006ACE;
+}
+
 /* @keyframes codeFrame {
   0% {
     transform: translateY(-50vh) translateX(0vw);

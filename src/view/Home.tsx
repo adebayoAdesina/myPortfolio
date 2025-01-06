@@ -4,6 +4,7 @@ import Navbar from "../component/Navbar";
 import HeroSection from "../component/home/HeroSection";
 import { coverImage } from "../constant/appImage";
 import Learned from "../component/home/Learned";
+import Worked from "../component/home/Worked";
 
 const Home = () => {
   const theme = useSelector(selectTheme);
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <Learned/>
+      <Worked/>
       <div className="">
         <div className="container mx-auto">
           <img src={coverImage} alt="cover image" />

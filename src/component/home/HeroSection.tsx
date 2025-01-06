@@ -24,7 +24,7 @@ const HeroSection = () => {
       }}
     >
       <section>
-        <div className="container mx-auto py-8">
+        <div className="container mx-auto pt-8 pb-1 overflow-hidden">
           <div className="flex items-center">
             <div className="w-1/2 flex flex-col gap-2">
               <h4

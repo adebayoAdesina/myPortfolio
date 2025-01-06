@@ -9,3 +9,16 @@ export interface learnedType {
   icon: string;
   type: string[];
 }
+
+export interface skillType {
+  icon?: string;
+  name: string;
+}
+export interface workedTyepe {
+  role: string;
+  company: string;
+  workDescription: string;
+  skills: skillType[];
+  dateFrom: string;
+  dateTo: string;
+}
