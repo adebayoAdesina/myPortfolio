@@ -1,11 +1,15 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./component/Navbar";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./view/Home";
+import { MouseFollower } from "react-mouse-follower";
 
 const App = () => {
   return (
     <>
+    <MouseFollower/>
       <Router>
-        <Navbar />
+        <Routes>
+          <Route path="/" Component={Home} />
+        </Routes>
       </Router>
     </>
   );

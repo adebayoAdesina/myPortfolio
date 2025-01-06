@@ -3,10 +3,52 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        greatVibes: "Great Vibes",
+        mulish: "Mulish",
+        londrinaOutline: "Londrina Outline",
+      },
       colors: {
         appBlack: "#0d0d0d",
-        appWhite: "#f7f7f7",
+        appLightGray: "#F2F2F2",
+        appDarkGray: "#333333",
+        appWhite: "#ffffff",
         appLight: "#F9F9F9",
+        appBgLight: "#eaf7f7",
+        textBlack: "#1B1E22",
+        appPrimary: "#006ACE",
+        appViolet: "#003ACE",
+        appTeal: "#0094CE",
+        appDarkBlue: "#004A9E",
+        appLightBlue: "#3399FF",
+      },
+      boxShadow: {
+        "custom-light": "0 2px 4px rgba(255, 255, 255, 0.6)",
+        "custom-dark": "0 2px 4px rgba(0, 0, 0, 0.5)",
+      },
+      keyframes: {
+        rotate: {
+          "0%": { transform: "scale(1) rotateZ(0)" },
+          "1%": { transform: "scale(.5) rotateZ(-180deg)" },
+          "5%": { transform: "scale(1) rotateZ(-360deg)" },
+        },
+        heartPulse: {
+          "0%": { transform: "scale(1)", opacity: 1 },
+          "50%": { transform: "scale(1.5)", opacity: 0 },
+          "100%": { transform: "scale(1)", opacity: 1 },
+        },
+
+        combineRotateHeartPulse: {
+          "0%": { transform: "scale(1) rotateZ(0)", opacity: 1 },
+          "50%": { transform: "scale(1.5) rotateZ(-180deg)", opacity: 0.5 },
+          "100%": { transform: "scale(1) rotateZ(-360deg)", opacity: 1 },
+        },
+      },
+      animation: {
+        rotate: "rotate 10s linear infinite",
+        heartPulse: "heartPulse 0.5s ease-in-out infinite",
+        combineRotateHeartPulse:
+          "combineRotateHeartPulse 30s ease-in-out infinite",
       },
     },
   },
