@@ -3,3 +3,9 @@ export interface navItem {
   path: string;
   onclick: () => void;
 }
+
+export interface learnedType {
+  name: string;
+  icon: string;
+  type: string[];
+}
