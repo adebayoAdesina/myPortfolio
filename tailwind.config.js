@@ -9,7 +9,8 @@ export default {
         londrinaOutline: "Londrina Outline",
       },
       colors: {
-        appBlack: "#0d0d0d",
+        // appBlack: "#0d0d0d",
+        appBlack: "#1e1e1e",
         appLightGray: "#F2F2F2",
         appDarkGray: "#333333",
         appWhite: "#ffffff",

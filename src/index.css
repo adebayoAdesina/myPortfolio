@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
 .code-animation {
   animation: codeFrame 50s ease-in infinite;
 }
