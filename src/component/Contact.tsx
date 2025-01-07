@@ -11,7 +11,7 @@ const Contact = () => {
     <section className="py-10">
       <div className="flex flex-col container mx-auto justify-center items-center gap-3">
         <p
-          className={`text-xl font-semibold max-w-[800px] mx-4 text-center ${
+          className={`tracking-wide text-xl font-semibold max-w-[800px] mx-4 text-center ${
             theme.isDark ? "text-appWhite" : "text-appBlack"
           }`}
         >

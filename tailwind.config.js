@@ -44,12 +44,23 @@ export default {
           "50%": { transform: "scale(1.5) rotateZ(-180deg)", opacity: 0.5 },
           "100%": { transform: "scale(1) rotateZ(-360deg)", opacity: 1 },
         },
+        shake: {
+          "0%, 100%": {
+            transform: "translateY(0) rotate(0deg)",
+            transformOrigin: "center",
+          },
+          "50%": {
+            transform: "translateY(-10px) rotate(10deg)",
+            transformOrigin: "20px 50px",
+          },
+        },
       },
       animation: {
         rotate: "rotate 10s linear infinite",
         heartPulse: "heartPulse 0.5s ease-in-out infinite",
         combineRotateHeartPulse:
           "combineRotateHeartPulse 30s ease-in-out infinite",
+        shake: "shake 0.5s infinite",
       },
     },
   },

@@ -12,7 +12,7 @@ const HeaderAndSubHeader: React.FC<HeaderAndSubHeaderProps> = ({
 }) => {
   const theme = useSelector(selectTheme);
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center pb-4">
       <h3
         className={`font-greatVibes text-2xl leading-3 ${
           theme.isDark && "text-appWhite"
@@ -20,7 +20,12 @@ const HeaderAndSubHeader: React.FC<HeaderAndSubHeaderProps> = ({
       >
         {header}
       </h3>
-      <h3 className="font-londrinaOutline font-semibold text-5xl tracking-widest text-appPrimary">
+      <h3
+        style={{ WebkitTextStroke: "1px #006ACE" }}
+        className={`font-extrabold text-6xl tracking-widest stroked-text ${
+          theme.isDark ? "text-appWhite" : "text-appWhite"
+        }`}
+      >
         {subHeader}
       </h3>
     </div>

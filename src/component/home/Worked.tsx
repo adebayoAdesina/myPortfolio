@@ -1,8 +1,11 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import HeaderAndSubHeader from "../HeaderAndSubHeader";
 import { workedData } from "../../constant/workedData";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../redux/slice/themeSlice";
 
 const Worked = () => {
+  const theme = useSelector(selectTheme);
   return (
     <section className="flex flex-col justify-center container mx-auto py-10">
       <HeaderAndSubHeader header="Where I've" subHeader="Worked" />
@@ -22,14 +25,33 @@ const Worked = () => {
                 ""
               )}
               <div className="w-11/12 border rounded-2xl p-6">
-                <h4 className="text-2xl font-semibold text-appPrimary">
+                <h4 className="text-2xl font-bold text-appPrimary">
                   {item.role}
                 </h4>
-                <h5 className="text-lg font-medium">{item.company}</h5>
-                <p className="my-3 text-sm">{item.workDescription}</p>
+                <h5
+                  className={`text-lg font-medium ${
+                    theme.isDark ? "text-appLightGray" : "text-appBlack"
+                  }`}
+                >
+                  {item.company}
+                </h5>
+                <p
+                  className={`my-3 text-sm ${
+                    theme.isDark ? "text-appLightGray" : "text-appBlack"
+                  }`}
+                >
+                  {item.workDescription}
+                </p>
 
                 <p className="flex items-center gap-2">
-                  <b> Skills:</b>{" "}
+                  <b
+                    className={`${
+                      theme.isDark ? "text-appLightGray" : "text-appBlack"
+                    }`}
+                  >
+                    {" "}
+                    Skills:
+                  </b>{" "}
                   <div>
                     <div className="flex gap-2 flex-wrap">
                       {item.skills.map((skill, id) => (
@@ -74,7 +96,9 @@ const Worked = () => {
                 index % 2 ? "justify-end" : "justify-start"
               } items-center`}
             >
-              <p className="font-medium italic">
+              <p className={`font-medium italic ${
+                    theme.isDark ? "text-appWhite" : "text-appBlack"
+                  }`}>
                 {item.dateFrom} - {item.dateTo}.
               </p>
             </div>

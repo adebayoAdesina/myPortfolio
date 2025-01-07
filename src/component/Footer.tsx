@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import { socialsData } from "../constant/socialsData";
-import { catCup } from "../constant/appImage";
+import { cartoonStudent } from "../constant/appImage";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../redux/slice/themeSlice";
 
@@ -41,10 +41,8 @@ const Footer = () => {
             <div className="flex items-center gap-1 text-xl">
               <Icon icon="si:copyright-alt-line" className="text-xl" />
               <div>
-                Beloved &nbsp;<span className="font-medium">
-
-                {new Date().getFullYear()}
-                </span>
+                JADE &nbsp;
+                <span className="font-medium">{new Date().getFullYear()}</span>
               </div>
             </div>
             {time}
@@ -56,7 +54,9 @@ const Footer = () => {
                 href={option.link}
                 target="_blank"
                 className={`border-2 w-12 h-12 rounded-full hover:rounded-none transition-all duration-200 justify-center items-center flex flex-col ${
-                  theme.isDark ? "border-appWhite" : "border-black"
+                  theme.isDark
+                    ? "border-appWhite text-appWhite"
+                    : "border-black text-appBlack"
                 }`}
               >
                 <Icon icon={option.icon} width="24" height="24" />
@@ -65,8 +65,12 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="flex fixed bottom-0">
-        <img src={catCup} alt="" />
+      <div className="flex fixed bottom-0 left-0 ">
+        <img
+          src={cartoonStudent}
+          alt="student cartoon image"
+          className="transform -translate-x-14"
+        />
       </div>
     </>
   );

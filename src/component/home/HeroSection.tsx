@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { selectTheme } from "../../redux/slice/themeSlice";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { UpdateFollower } from "react-mouse-follower";
+import { socialsData } from "../../constant/socialsData";
 
 const HeroSection = () => {
   const theme = useSelector(selectTheme);
@@ -26,7 +27,7 @@ const HeroSection = () => {
       <section>
         <div className="container mx-auto pt-8 pb-1 overflow-hidden">
           <div className="flex items-center">
-            <div className="w-1/2 flex flex-col gap-2">
+            <div className="w-1/2 flex flex-col gap-5">
               <h4
                 className={`font-greatVibes text-base ${
                   theme.isDark ? "text-appWhite" : "text-appBlack"
@@ -46,12 +47,12 @@ const HeroSection = () => {
                   backgroundElement: <div className={`text-white`}></div>,
                 }}
               >
-                <h2 className="text-5xl font-extrabold text-appPrimary">
-                  A Full Stack Developer
+                <h2 className="text-6xl font-extrabold text-appPrimary">
+                  A Full-Stack Developer
                 </h2>
               </UpdateFollower>
               <p
-                className={`text-base font-mulish ${
+                className={`text-base font-mulish w-10/12  ${
                   theme.isDark ? "text-appWhite" : "text-appBlack"
                 }`}
               >
@@ -61,6 +62,29 @@ const HeroSection = () => {
                 solutions to life, ensuring a smooth user experience and robust
                 functionality.
               </p>
+              <div className="flex mt-6">
+                <a href="/resume.pdf" download={"Adebayo_Adesina_CV.pdf"}>
+                  <button className="bg-appPrimary px-6 py-2 text-white">
+                    Download CV
+                  </button>
+                </a>
+              </div>
+              <div className="flex gap-5">
+                {socialsData.map((option) => (
+                  <a
+                    key={option.link}
+                    href={option.link}
+                    target="_blank"
+                    className={`border w-12 h-12 rounded-full hover:rounded-none transition-all duration-200 justify-center items-center flex flex-col ${
+                      theme.isDark
+                        ? "border-appWhite text-appWhite"
+                        : "border-black text-appBlack"
+                    }`}
+                  >
+                    <Icon icon={option.icon} width="24" height="24" />
+                  </a>
+                ))}
+              </div>
             </div>
             <div className="w-1/2">
               <div className="flex justify-center">

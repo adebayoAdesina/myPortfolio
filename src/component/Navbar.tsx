@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { selectTheme, setTheme } from "../redux/slice/themeSlice";
 import { navItem } from "../type/type";
+import { catCup } from "../constant/appImage";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -69,7 +70,7 @@ const Navbar = () => {
             to="/"
             className="text-base lg:text-[22px] font-extrabold text-appPrimary"
           >
-            Beloved
+            JADE
           </Link>
           <ul className="lg:flex hidden lg:gap-x-7 text-base sm:text-sm">
             {navItems.map((item, index) => (
@@ -105,16 +106,22 @@ const Navbar = () => {
                 </span>
               )}
             </button>
-            <a
-              href="/Favour-emmanuel-resume.pdf"
-              download={"Favour-emmanuel-resume.pdf"}
-            >
-              <button className="hidden lg:flex bg-linear-gradient text-sm text-[#323232] py-3 px-5 rounded-full">
-                Download CV
-                <span className="text-xl ml-2">
-                  <Icon icon="iconoir:download" />
-                </span>
-              </button>
+
+            <a href="https://github.com/adebayoAdesina" target="_blank">
+              <div className="flex relative">
+                <img
+                  src={catCup}
+                  alt="github cat with cup"
+                  className="absolute w-96 -translate-y-8"
+                />
+                <button
+                  className={`ml-16 hidden lg:flex font-bold text-xl py-3 px-5 rounded-full ${
+                    theme.isDark ? "text-appLightGray" : "text-appBlack"
+                  }`}
+                >
+                  GitHub
+                </button>
+              </div>
             </a>
           </div>
 
@@ -132,7 +139,7 @@ const Navbar = () => {
           >
             <div className="flex justify-between items-center">
               <Link to="/" className="text-base lg:text-xl font-extrabold">
-                B<span className="text-appGreen">Dev</span>
+                JADE
               </Link>
               <span
                 onClick={() => setNav(!nav)}
