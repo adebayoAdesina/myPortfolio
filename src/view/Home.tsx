@@ -5,6 +5,7 @@ import HeroSection from "../component/home/HeroSection";
 import { coverImage } from "../constant/appImage";
 import Learned from "../component/home/Learned";
 import Worked from "../component/home/Worked";
+import Footer from "../component/Footer";
 
 const Home = () => {
   const theme = useSelector(selectTheme);
@@ -19,6 +20,7 @@ const Home = () => {
           <img src={coverImage} alt="cover image" />
         </div>
       </div>
+      <Footer/>
     </main>
   );
 };
