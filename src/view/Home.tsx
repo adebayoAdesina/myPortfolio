@@ -7,6 +7,7 @@ import Learned from "../component/home/Learned";
 import Worked from "../component/home/Worked";
 import Footer from "../component/Footer";
 import Contact from "../component/Contact";
+import Project from "../component/home/Project";
 
 const Home = () => {
   const theme = useSelector(selectTheme);
@@ -15,6 +16,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <Learned />
+      <Project/>
       <Worked />
       <Contact/>
       <div className="">
