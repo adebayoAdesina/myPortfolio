@@ -8,6 +8,11 @@ import cat from "../assets/svg/cat-13812_256.gif";
 import cube from '../assets/svg/cube-11588_256.gif';
 import cartoonStudent from '../assets/svg/cartoon-student-13527_256.gif';
 
+// project images
+import wivali1 from '../assets/image/projects/wivali/wivali.png';
+import wivali2 from '../assets/image/projects/wivali/wivali2.jpeg';
+import wivali3 from '../assets/image/projects/wivali/wivali3.png';
+
 export {
   coverImage,
   catCup,
@@ -18,4 +23,7 @@ export {
   cat,
   cube,
   cartoonStudent,
+  wivali1,
+  wivali2,
+  wivali3,
 };

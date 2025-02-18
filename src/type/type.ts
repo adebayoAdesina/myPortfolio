@@ -14,11 +14,23 @@ export interface skillType {
   icon?: string;
   name: string;
 }
-export interface workedTyepe {
+export interface workedType {
   role: string;
   company: string;
   workDescription: string;
   skills: skillType[];
   dateFrom: string;
   dateTo: string;
+}
+
+export interface ProjectType {
+  title: string;
+  description: string;
+  image: string[];
+  links: CustomLink;
+}
+
+export interface CustomLink {
+  github?: string;
+  website?: string;
 }
