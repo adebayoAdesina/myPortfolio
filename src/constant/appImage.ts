@@ -13,6 +13,13 @@ import wivali1 from '../assets/image/projects/wivali/wivali.png';
 import wivali2 from '../assets/image/projects/wivali/wivali2.jpeg';
 import wivali3 from '../assets/image/projects/wivali/wivali3.png';
 
+import gbetAdminProfile from '../assets/image/projects/gbetpools/gbetAdminProfile.jpeg';
+import gbetDownloadPage from '../assets/image/projects/gbetpools/gbetdownloadPage.jpeg';
+
+import arimart1 from '../assets/image/projects/arimart-ecommerce/arimart1.png';
+import arimart2 from '../assets/image/projects/arimart-ecommerce/arimart2.png';
+import arimart3 from '../assets/image/projects/arimart-ecommerce/arimart3.png';
+
 export {
   coverImage,
   catCup,
@@ -26,4 +33,9 @@ export {
   wivali1,
   wivali2,
   wivali3,
+  gbetAdminProfile,
+  gbetDownloadPage,
+  arimart1,
+  arimart2,
+  arimart3,
 };

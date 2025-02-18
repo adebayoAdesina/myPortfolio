@@ -17,14 +17,16 @@ const AnimatedBoxes: React.FC = () => {
         scrollTrigger: {
           trigger: box,
           scrub: true,
-          end: "+=100",
+          end: "+=80",
           pin: true,
           endTrigger: "hidden",
           onEnter: ({ progress, direction, isActive }) =>
+
             console.log(progress, direction, isActive),
         },
         x: 0,
-        y: 400,
+        y: 250,
+        opacity:0.2,
         display: "hidden",
       });
     });
@@ -66,7 +68,7 @@ const AnimatedBoxes: React.FC = () => {
                   <img
                     src={option.image[selectedImages[i]]}
                     alt={option.title}
-                    className="h-full object-cover w-full"
+                    className="h-full object-cover object-[50%_0%] w-full"
                   />
                 </div>
                 <div className="flex m-6 justify-center">
