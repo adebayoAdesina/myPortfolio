@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import HeaderAndSubHeader from "../HeaderAndSubHeader";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../redux/slice/themeSlice";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { learnedData } from "../../constant/learnedData";
 import { cube } from "../../constant/appImage";
+import { motion, useInView } from "framer-motion";
 
 const Learned = () => {
   const theme = useSelector(selectTheme);
@@ -24,13 +25,17 @@ const Learned = () => {
       : learnedData.filter((item) =>
           item.type.includes(learnedButton[currentIndex])
         );
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: "-250px" });
+
   return (
     <section className="py-5 container mx-auto">
       <img src={cube} alt="cube rotating" />
       <HeaderAndSubHeader header="What I've" subHeader="Learned" />
-      <div className="flex justify-center gap-5 mt-6">
+      <div className="flex justify-center gap-5 mt-6" ref={ref}>
         {learnedButton.map((option, index) => (
-          <button
+          <motion.button
             onClick={() => setCurrentIndex(index)}
             className={`px-5 py-2 rounded-t-3xl ${
               theme.isDark
@@ -43,20 +48,28 @@ const Learned = () => {
             }`}
           >
             {option}
-          </button>
+          </motion.button>
         ))}
       </div>
       <div className=" min-h-60">
         <div className="justify-center flex flex-wrap my-4 gap-4 px-16">
-          {filteredData.map((option) => (
-            <div
-              className={`hover:animate-shake cursor-default border border-appPrimary px-6 py-2 rounded-2xl flex justify-center items-center gap-2 ${
+          {filteredData.map((option, id) => (
+            <motion.div
+              key={id}
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{
+                delay: id * 0.1,
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+              className={`hover:animate-shake hover:bg-appViolet hover:text-white cursor-default border border-appPrimary px-6 py-2 rounded-2xl flex justify-center items-center gap-2 ${
                 theme.isDark ? "text-appLightGray" : "text-appBlack"
               }`}
             >
               <Icon icon={option.icon} className="text-3xl" />
               <h6>{option.name}</h6>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

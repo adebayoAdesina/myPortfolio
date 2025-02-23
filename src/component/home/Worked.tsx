@@ -96,9 +96,11 @@ const Worked = () => {
                 index % 2 ? "justify-end" : "justify-start"
               } items-center`}
             >
-              <p className={`font-medium italic ${
-                    theme.isDark ? "text-appWhite" : "text-appBlack"
-                  }`}>
+              <p
+                className={`font-medium italic ${
+                  theme.isDark ? "text-appWhite" : "text-appBlack"
+                }`}
+              >
                 {item.dateFrom} - {item.dateTo}.
               </p>
             </div>

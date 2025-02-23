@@ -3,11 +3,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { projectData } from "../constant/projectData";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../redux/slice/themeSlice";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedBoxes: React.FC = () => {
   const boxesRef = useRef<HTMLDivElement[]>([]);
+  const theme = useSelector(selectTheme);
 
   useEffect(() => {
     const boxes = boxesRef.current;
@@ -21,12 +24,11 @@ const AnimatedBoxes: React.FC = () => {
           pin: true,
           endTrigger: "hidden",
           onEnter: ({ progress, direction, isActive }) =>
-
             console.log(progress, direction, isActive),
         },
         x: 0,
         y: 250,
-        opacity:0.2,
+        opacity: 0.2,
         display: "hidden",
       });
     });
@@ -55,7 +57,9 @@ const AnimatedBoxes: React.FC = () => {
         {projectData.map((option, i) => (
           <div
             key={i}
-            className="box w-full h-full border-2 shadow-inner rounded-3xl overflow-hidden bg-white"
+            className={`box w-full h-full border-2 shadow-inner rounded-3xl overflow-hidden ${
+              theme.isDark == true ? "bg-appBlack text-appWhite" : "bg-white"
+            } backdrop-blur-md bg-opacity-45 `}
             ref={(el) => {
               if (el) boxesRef.current[i] = el;
             }}
@@ -99,6 +103,32 @@ const AnimatedBoxes: React.FC = () => {
                   <span className="font-medium text-appPrimary">
                     See More.....
                   </span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <b
+                    className={`${
+                      theme.isDark ? "text-appLightGray" : "text-appBlack"
+                    }`}
+                  >
+                    {" "}
+                    Tools:
+                  </b>{" "}
+                  <div>
+                    <div className="flex gap-2 flex-wrap">
+                      {option.tools.map((tool, id) => (
+                        <span
+                          key={id}
+                          className="bg-appLightGray text-appBlack rounded-sm px-3 flex items-center gap-1"
+                        >
+                          <Icon
+                            icon={tool.icon || ""}
+                            className="text-xl  text-appPrimary"
+                          />
+                          {tool.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </p>
                 <div className="flex flex-wrap mt-5 gap-5">
                   {option.links.github && (

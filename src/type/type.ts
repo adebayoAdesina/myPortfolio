@@ -28,6 +28,7 @@ export interface ProjectType {
   description: string;
   image: string[];
   links: CustomLink;
+  tools: skillType[]
 }
 
 export interface CustomLink {

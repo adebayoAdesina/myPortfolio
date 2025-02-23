@@ -3,6 +3,8 @@ import { selectTheme } from "../../redux/slice/themeSlice";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { UpdateFollower } from "react-mouse-follower";
 import { socialsData } from "../../constant/socialsData";
+import { josephAdebayoImage } from "../../constant/appImage";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const theme = useSelector(selectTheme);
@@ -24,7 +26,10 @@ const HeroSection = () => {
         ),
       }}
     >
-      <section className="cursor-none">
+      <motion.section
+        className="cursor-none overflow-hidden"
+       
+      >
         <div className="container mx-auto pt-8 pb-1 overflow-hidden">
           <div className="flex items-center">
             <div className="w-1/2 flex flex-col gap-5">
@@ -64,12 +69,12 @@ const HeroSection = () => {
               </p>
               <div className="flex mt-6">
                 <a href="/resume.pdf" download={"Adebayo_Adesina_CV.pdf"}>
-                  <button className="bg-appPrimary px-6 py-2 text-white">
+                  <button className="bg-appPrimary px-6 py-2 text-white animate-bounce">
                     Download CV
                   </button>
                 </a>
               </div>
-              <div className="flex gap-5">
+              <div className="flex gap-5 mt-16">
                 {socialsData.map((option) => (
                   <a
                     key={option.link}
@@ -86,17 +91,18 @@ const HeroSection = () => {
                 ))}
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 py-10">
               <div className="flex justify-center">
                 <img
-                  src="https://th.bing.com/th/id/R.07a251233e44319d35596a03b3838c9b?rik=YWWhpjNjq9WMZw&pid=ImgRaw&r=0"
-                  alt=""
+                  src={josephAdebayoImage}
+                  alt="Joseph Adebayo Adesina image"
+                  className="w-10/12"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="flex  py-10">
+        <div className="flex ">
           <div
             draggable={true}
             className={`animate duration-1000 rounded-full p-4 ${
@@ -111,7 +117,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
     </UpdateFollower>
   );
 };

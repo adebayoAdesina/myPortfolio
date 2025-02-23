@@ -1,3 +1,4 @@
+import { josephAdebayoImage } from "../../constant/appImage";
 import AnimatedBoxes from "../AnimatedBoxes";
 import HeaderAndSubHeader from "../HeaderAndSubHeader";
 
@@ -5,10 +6,11 @@ const Project = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <div className="flex justify-center">
+        <div className="flex justify-center group ">
           <img
-            src="https://tse4.mm.bing.net/th?id=OIP.QFl5ItwwqbTdlkdf2DMtlAHaHa&rs=1&pid=ImgDetMain"
-            alt=""
+            src={josephAdebayoImage}
+            alt="Joseph Adebayo Image"
+            className="max-w-[400px]"
           />
         </div>
         <div className="mt-5">
@@ -17,7 +19,7 @@ const Project = () => {
             subHeader="I've Contributed To"
           />
         </div>
-        <AnimatedBoxes/>
+        <AnimatedBoxes />
       </div>
     </section>
   );

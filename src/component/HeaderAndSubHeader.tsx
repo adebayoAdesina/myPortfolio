@@ -1,5 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectTheme } from "../redux/slice/themeSlice";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface HeaderAndSubHeaderProps {
   header: string;
@@ -11,24 +13,39 @@ const HeaderAndSubHeader: React.FC<HeaderAndSubHeaderProps> = ({
   subHeader,
 }) => {
   const theme = useSelector(selectTheme);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <div className="flex flex-col items-center justify-center pb-4">
-      <h3
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex flex-col items-center justify-center py-4 overflow-hidden"
+    >
+      <motion.h3
+        initial={{ opacity: 0, x: 400 }}
+        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1, ease: "easeOut" }}
         className={`font-greatVibes text-2xl leading-3 ${
           theme.isDark && "text-appWhite"
         }`}
       >
         {header}
-      </h3>
-      <h3
+      </motion.h3>
+      <motion.h3
+        initial={{ opacity: 0, x: -400 }}
+        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1, ease: "easeOut" }}
         style={{ WebkitTextStroke: "1px #006ACE" }}
         className={`font-extrabold text-6xl tracking-widest stroked-text ${
           theme.isDark ? "text-appWhite" : "text-appWhite"
         }`}
       >
         {subHeader}
-      </h3>
-    </div>
+      </motion.h3>
+    </motion.div>
   );
 };
 

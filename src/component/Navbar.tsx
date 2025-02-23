@@ -56,8 +56,22 @@ const Navbar = () => {
     dispatch(setTheme(!theme.isDark));
   }
 
+  const [navSize, setNavSize] = useState(false);
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavSize(true);
+    } else {
+      setNavSize(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <nav className="lg:py-10 py-5 px-5 lg:px-10 sticky top-0 z-50 container mx-auto">
+    <nav
+      className={`lg:py-10 py-5 sticky top-0 z-50 container mx-auto ${
+        navSize ? "px-5 lg:px-10" : "px-0"
+      } transition-all duration-500`}
+    >
       <header
         className={`${
           theme.isDark

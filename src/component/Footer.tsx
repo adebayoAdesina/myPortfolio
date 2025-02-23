@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import { socialsData } from "../constant/socialsData";
-import { cartoonStudent } from "../constant/appImage";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../redux/slice/themeSlice";
 
@@ -65,13 +64,13 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="flex fixed bottom-0 left-0 ">
+      {/* <div className="flex fixed bottom-0 left-0 ">
         <img
           src={cartoonStudent}
           alt="student cartoon image"
           className="transform -translate-x-14"
         />
-      </div>
+      </div> */}
     </>
   );
 };

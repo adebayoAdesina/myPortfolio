@@ -1,6 +1,6 @@
-import { workedTyepe } from "../type/type";
+import { workedType } from "../type/type";
 
-export const workedData: workedTyepe[] = [
+export const workedData: workedType[] = [
   {
     role: "Front-end Website Developer",
     company: "Geecore Limited",
