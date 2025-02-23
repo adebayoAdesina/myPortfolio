@@ -21,6 +21,17 @@ import arimart1 from "../assets/image/projects/arimart-ecommerce/arimart1.png";
 import arimart2 from "../assets/image/projects/arimart-ecommerce/arimart2.png";
 import arimart3 from "../assets/image/projects/arimart-ecommerce/arimart3.png";
 
+import getLinked1 from "../assets/image/projects/get-linked/getlinked1.png";
+import getLinked2 from "../assets/image/projects/get-linked/getlinked2.png";
+
+import spaceWebsite1 from "../assets/image/projects/space-website/spaceWebsite1.png";
+import spaceWebsite2 from "../assets/image/projects/space-website/spaceWebsite2.png";
+import spaceWebsite3 from "../assets/image/projects/space-website/spaceWebsite3.png";
+
+
+import ticTacToe1 from '../assets/image/projects/tic-tac-toe/tic-tac-toe1.png'
+import ticTacToe2 from '../assets/image/projects/tic-tac-toe/tic-tac-toe2.png'
+
 export {
   coverImage,
   catCup,
@@ -40,4 +51,11 @@ export {
   arimart2,
   arimart3,
   josephAdebayoImage,
+  getLinked1,
+  getLinked2,
+  spaceWebsite1,
+  spaceWebsite2,
+  spaceWebsite3,
+  ticTacToe1,
+  ticTacToe2,
 };

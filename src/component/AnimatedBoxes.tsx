@@ -14,21 +14,23 @@ const AnimatedBoxes: React.FC = () => {
 
   useEffect(() => {
     const boxes = boxesRef.current;
-
     boxes.forEach((box) => {
       gsap.to(box, {
         scrollTrigger: {
           trigger: box,
-          scrub: true,
-          end: "+=80",
+          scrub: 1,
+          // end: "+=150",
+          start: "top 10%",
+          end: "top 10%",
           pin: true,
           endTrigger: "hidden",
+          toggleActions: "play none none reverse",
           onEnter: ({ progress, direction, isActive }) =>
             console.log(progress, direction, isActive),
         },
         x: 0,
-        y: 250,
-        opacity: 0.2,
+        y: 500,
+        opacity: 0.1,
         display: "hidden",
       });
     });

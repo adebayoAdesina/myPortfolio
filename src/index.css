@@ -7,6 +7,11 @@
 body {
   font-family: "Mulish", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .code-animation {
   animation: codeFrame 50s ease-in infinite;
 }

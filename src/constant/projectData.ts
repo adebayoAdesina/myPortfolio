@@ -5,6 +5,13 @@ import {
   arimart3,
   gbetAdminProfile,
   gbetDownloadPage,
+  getLinked1,
+  getLinked2,
+  spaceWebsite1,
+  spaceWebsite2,
+  spaceWebsite3,
+  ticTacToe1,
+  ticTacToe2,
   wivali1,
   wivali2,
   wivali3,
@@ -124,6 +131,112 @@ export const projectData: ProjectType[] = [
       {
         icon: "devicon:redux",
         name: "Redux",
+      },
+    ],
+  },
+  {
+    title: "GetLinked Challenge",
+    description: `
+    <div>
+            <p class="description">
+               This project presented several challenges, including integrating complex features, optimizing the site for performance, and ensuring a responsive design across various devices. Overcoming these obstacles has not only enhanced my technical skills but also reinforced my problem-solving abilities.
+            </p>
+            
+        </div>
+    `,
+    image: [getLinked1, getLinked2],
+    links: {
+      website: "https://getlinkedchallenge.netlify.app/",
+      github: "https://github.com/adebayoAdesina/GetlinkedChallenge",
+    },
+    tools: [
+      {
+        icon: "devicon:react",
+        name: "React",
+      },
+      {
+        icon: "devicon:javascript",
+        name: "JavaScript",
+      },
+      {
+        icon: "devicon:css3",
+        name: "CSS",
+      },
+      {
+        icon: "devicon:redux",
+        name: "Redux",
+      },
+    ],
+  },
+  {
+    title: "Space Tourism Website",
+    description: `
+    <div>
+            <p class="description">
+               I designed and developed an engaging and visually stunning space tourism website, focusing solely on front-end code and user interface design. This project highlights my expertise in creating responsive, user-friendly, and aesthetically pleasing web pages.
+            </p>
+            
+        </div>
+    `,
+    image: [spaceWebsite1, spaceWebsite2, spaceWebsite3],
+    links: {
+      website: "https://awesome-shockley-cc701e.netlify.app/",
+      github: "https://github.com/adebayoAdesina/space-tourism-website",
+    },
+    tools: [
+      {
+        icon: "devicon:react",
+        name: "React",
+      },
+      {
+        icon: "devicon:javascript",
+        name: "JavaScript",
+      },
+      {
+        icon: "devicon:css3",
+        name: "CSS",
+      },
+      {
+        icon: "devicon:redux",
+        name: "Redux",
+      },
+    ],
+  },
+  {
+    title: "Tic Tac Toe",
+    description: `
+    <div>
+           <p class="description">
+               I designed and developed a fully functional Tic Tac Toe game, showcasing my skills in front-end development and user interface design. This project demonstrates my ability to create interactive and engaging web applications.
+            </p>
+            <ul class="description">
+                <li><strong>User-Friendly Interface:</strong> The game features a clean and intuitive interface, allowing users to easily enter their information, select their symbols, and start playing.</li>
+                <li><strong>Responsive Design:</strong> Ensured the game is responsive and works seamlessly across various devices, from desktops to mobile phones.</li>
+                <li><strong>Interactive Elements:</strong> Incorporated interactive elements, such as score tracking, restart, and end game options, to enhance the user experience.</li>
+                <li><strong>HTML/CSS/JavaScript:</strong> Utilized HTML for structure, CSS for styling, and JavaScript for game logic and interactivity.</li>
+               </ul>
+            <p class="description">
+                My role involved collaborating closely with the backend developer to ensure a cohesive and seamless user experience across all components. This project demonstrates my expertise in frontend development, user interface design, and creating engaging web applications.
+                </p>
+        </div>
+    `,
+    image: [ticTacToe1, ticTacToe2],
+    links: {
+      website: "https://tic-tac-toe789.netlify.app/",
+      github: "https://github.com/adebayoAdesina/Draw-Game-Tic-Tac-Toe",
+    },
+    tools: [
+      {
+        icon: "devicon:javascript",
+        name: "JavaScript",
+      },
+      {
+        icon: "devicon:css3",
+        name: "CSS",
+      },
+      {
+        icon: "devicon:html5",
+        name: "HTML",
       },
     ],
   },
