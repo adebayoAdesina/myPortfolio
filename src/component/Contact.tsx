@@ -8,10 +8,10 @@ const Contact = () => {
   const theme = useSelector(selectTheme);
 
   return (
-    <section className="py-10">
+    <section className="py-4 sm:py-6 md:py-8 lg:py-10">
       <div className="flex flex-col container mx-auto justify-center items-center gap-3">
         <p
-          className={`tracking-wide text-xl font-semibold max-w-[800px] mx-4 text-center ${
+          className={`tracking-wide text-base sm:text-lg lg:text-xl font-semibold max-w-[800px] mx-4 text-center ${
             theme.isDark ? "text-appWhite" : "text-appBlack"
           }`}
         >
@@ -21,28 +21,28 @@ const Contact = () => {
         </p>
         <img src={theme.isDark ? brainOne : creaturesOne} alt="" />
         <h2
-          className={`text-5xl font-extrabold ${
+          className={`text-3xl md:text-4xl lg:text-5xl font-extrabold ${
             theme.isDark ? "text-appPrimary" : "text-appBlack"
           }`}
         >
           Got any ideas?
         </h2>
         <h5
-          className={`text-lg font-mulish ${
+          className={`text-base md:text-lg font-mulish ${
             theme.isDark ? "text-appWhite" : "text-appBlack"
           }`}
         >
           Get in touch
         </h5>
-        <div className="flex gap-10 my-10">
+        <div className="flex flex-wrap justify-center gap-10 my-10">
           {contactData.map((option) => (
             <div
               key={option.icon}
               className="flex flex-col gap-2 justify-center items-center"
             >
-              <Icon icon={option.icon} className="text-5xl" />
+              <Icon icon={option.icon} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
               <p
-                className={`text-base font-semibold tracking-wide ${
+                className={`text-sm md:text-base font-semibold tracking-wide ${
                   theme.isDark ? "text-appWhite" : "text-appBlack"
                 }`}
               >

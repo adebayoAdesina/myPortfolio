@@ -32,11 +32,11 @@ const Footer = () => {
     <>
       <footer>
         <div
-          className={`flex justify-between container mx-auto py-16 items-center ${
+          className={`flex flex-col-reverse gap-4 sm:flex-row justify-between container mx-auto py-16 items-center sm:items-start ${
             theme.isDark ? "text-appWhite" : "text-appBlack"
           }`}
         >
-          <div className="flex flex-col">
+          <div className="flex flex-row items-center sm:items-start sm:justify-start  justify-between w-full sm:flex-col mt-5 sm:mt-0">
             <div className="flex items-center gap-1 text-xl">
               <Icon icon="si:copyright-alt-line" className="text-xl" />
               <div>
@@ -52,7 +52,7 @@ const Footer = () => {
                 key={option.link}
                 href={option.link}
                 target="_blank"
-                className={`border-2 w-12 h-12 rounded-full hover:rounded-none transition-all duration-200 justify-center items-center flex flex-col ${
+                className={`border-2 w-10 md:w-12 h-10 md:h-12 rounded-full hover:rounded-none transition-all duration-200 justify-center items-center flex flex-col ${
                   theme.isDark
                     ? "border-appWhite text-appWhite"
                     : "border-black text-appBlack"

@@ -39,7 +39,7 @@ const HeaderAndSubHeader: React.FC<HeaderAndSubHeaderProps> = ({
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1, ease: "easeOut" }}
         style={{ WebkitTextStroke: "1px #006ACE" }}
-        className={`font-extrabold text-6xl tracking-widest stroked-text ${
+        className={`font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-widest stroked-text ${
           theme.isDark ? "text-appWhite" : "text-appWhite"
         }`}
       >

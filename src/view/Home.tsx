@@ -16,13 +16,13 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <Learned />
-      <Project/>
+      <Project />
       <Worked />
-      <Contact/>
+      <Contact />
       <div className="">
         <div className="container mx-auto">
           <div className="flex justify-end">
-            <img src={cat} alt="" />
+            <img src={cat} alt="cat blink image" className="w-[80px] sm:w-[100px] md:[150px] lg:w-[230px]" />
           </div>
           <img src={coverImage} alt="cover image" />
         </div>

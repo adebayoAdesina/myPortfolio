@@ -13,18 +13,16 @@ const Worked = () => {
         {workedData.map((item, index) => (
           <div
             key={index + item.company}
-            className={`w-full flex ${index % 2 && "flex-row-reverse"}`}
+            className={`w-full flex ${index % 2 && "lg:flex-row-reverse"}`}
           >
-            <div className="w-1/2 p-4 flex justify-center">
-              {index % 2 ? (
+            <div className="w-ful lg:w-1/2 p-4 flex justify-center">
+              {index % 2 && (
                 <Icon
                   icon="ph:flow-arrow"
-                  className="text-5xl translate-y-9 translate-x-2 text-appPrimary rotate-180"
+                  className="hidden lg:flex text-5xl translate-y-9 translate-x-2 text-appPrimary rotate-180"
                 />
-              ) : (
-                ""
               )}
-              <div className="w-11/12 border rounded-2xl p-6">
+              <div className="w-full lg:w-11/12 border rounded-2xl p-6">
                 <h4 className="text-2xl font-bold text-appPrimary">
                   {item.role}
                 </h4>
@@ -35,6 +33,13 @@ const Worked = () => {
                 >
                   {item.company}
                 </h5>
+                <p
+                  className={`flex lg:hidden font-medium text-xs italic ${
+                    theme.isDark ? "text-appWhite" : "text-appBlack"
+                  }`}
+                >
+                  {item.dateFrom} - {item.dateTo}.
+                </p>
                 <p
                   className={`my-3 text-sm ${
                     theme.isDark ? "text-appLightGray" : "text-appBlack"
@@ -73,16 +78,16 @@ const Worked = () => {
               {!(index % 2) ? (
                 <Icon
                   icon="ph:flow-arrow"
-                  className="text-5xl translate-y-9 -translate-x-2 text-appPrimary"
+                  className="hidden lg:flex text-5xl translate-y-9 -translate-x-2 text-appPrimary"
                 />
               ) : (
                 ""
               )}
             </div>
-            <div className="w-52 flex justify-center bg-line">
+            <div className="w-52 flex justify-center lg:bg-line">
               <div
                 className={`border rounded-full flex justify-center items-center p-4 w-[60px] h-[60px] z-10 ${
-                  index % 2 ? "mt-14" : "mt-5"
+                  index % 2 ? "mt-5 lg:mt-14" : "mt-5"
                 } bg-appPrimary`}
               >
                 <Icon
@@ -92,7 +97,7 @@ const Worked = () => {
               </div>
             </div>
             <div
-              className={`w-1/2 p-4 flex ${
+              className={`hidden lg:w-1/2 p-4 lg:flex ${
                 index % 2 ? "justify-end" : "justify-start"
               } items-center`}
             >

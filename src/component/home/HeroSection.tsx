@@ -26,13 +26,10 @@ const HeroSection = () => {
         ),
       }}
     >
-      <motion.section
-        className="cursor-none overflow-hidden"
-       
-      >
-        <div className="container mx-auto pt-8 pb-1 overflow-hidden">
-          <div className="flex items-center">
-            <div className="w-1/2 flex flex-col gap-5">
+      <motion.section className="cursor-none overflow-hidden">
+        <div className="px-4 sm:px-8 lg:px-0 lg:container mx-auto pt-8 pb-1 overflow-hidden">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="w-full md:w-1/2 flex flex-col text-center sm:text-start gap-3 sm:gap-4 md:gap-5 ">
               <h4
                 className={`font-greatVibes text-base ${
                   theme.isDark ? "text-appWhite" : "text-appBlack"
@@ -52,12 +49,12 @@ const HeroSection = () => {
                   backgroundElement: <div className={`text-white`}></div>,
                 }}
               >
-                <h2 className="text-6xl font-extrabold text-appPrimary">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-appPrimary">
                   A Full-Stack Developer
                 </h2>
               </UpdateFollower>
               <p
-                className={`text-base font-mulish w-10/12  ${
+                className={`text-sm sm:text-base font-mulish w-full sm:w-10/12  ${
                   theme.isDark ? "text-appWhite" : "text-appBlack"
                 }`}
               >
@@ -67,20 +64,20 @@ const HeroSection = () => {
                 solutions to life, ensuring a smooth user experience and robust
                 functionality.
               </p>
-              <div className="flex mt-6">
+              <div className="flex justify-center sm:justify-start mt-6">
                 <a href="/resume.pdf" download={"Adebayo_Adesina_CV.pdf"}>
                   <button className="bg-appPrimary px-6 py-2 text-white animate-bounce">
                     Download CV
                   </button>
                 </a>
               </div>
-              <div className="flex gap-5 mt-16">
+              <div className="flex justify-center sm:justify-start gap-5 mt-5 sm:mt-10 md:mt-16">
                 {socialsData.map((option) => (
                   <a
                     key={option.link}
                     href={option.link}
                     target="_blank"
-                    className={`border w-12 h-12 rounded-full hover:rounded-none transition-all duration-200 justify-center items-center flex flex-col ${
+                    className={`border w-10 sm:w-12 h-10 sm:h-12 rounded-full hover:rounded-none transition-all duration-200 justify-center items-center flex flex-col ${
                       theme.isDark
                         ? "border-appWhite text-appWhite"
                         : "border-black text-appBlack"
@@ -91,7 +88,7 @@ const HeroSection = () => {
                 ))}
               </div>
             </div>
-            <div className="w-1/2 py-10">
+            <div className="md:w-1/2 py-10">
               <div className="flex justify-center">
                 <img
                   src={josephAdebayoImage}
@@ -102,7 +99,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex ">
+        <div className="flex">
           <div
             draggable={true}
             className={`animate duration-1000 rounded-full p-4 ${

@@ -30,14 +30,19 @@ const Learned = () => {
   const isInView = useInView(ref, { margin: "-250px" });
 
   return (
-    <section className="py-5 container mx-auto">
-      <img src={cube} alt="cube rotating" />
+    <section className="sm:py-5 px-4 sm:px-8 lg:px-0 lg:container mx-auto">
+      <div className="flex">
+        <img src={cube} alt="cube rotating" />
+      </div>
       <HeaderAndSubHeader header="What I've" subHeader="Learned" />
-      <div className="flex justify-center gap-5 mt-6" ref={ref}>
+      <div
+        className="flex flex-wrap lg:flex-nowrap justify-center gap-3 sm:gap-4 lg:gap-5 mt-2 sm:mt-4 lg:mt-6"
+        ref={ref}
+      >
         {learnedButton.map((option, index) => (
           <motion.button
             onClick={() => setCurrentIndex(index)}
-            className={`px-5 py-2 rounded-t-3xl ${
+            className={`px-5 py-2 rounded-t-3xl text-sm md:text-base ${
               theme.isDark
                 ? currentIndex == index
                   ? "bg-appPrimary text-white"
@@ -52,7 +57,7 @@ const Learned = () => {
         ))}
       </div>
       <div className=" min-h-60">
-        <div className="justify-center flex flex-wrap my-4 gap-4 px-16">
+        <div className="justify-center flex flex-wrap my-4 gap-2 md:gap-3 lg:gap-4 px-5 sm:px-8 md:px-12 lg:px-16">
           {filteredData.map((option, id) => (
             <motion.div
               key={id}
@@ -63,11 +68,14 @@ const Learned = () => {
                 duration: 0.3,
                 ease: "easeOut",
               }}
-              className={`hover:animate-shake hover:bg-appViolet hover:text-white cursor-default border border-appPrimary px-6 py-2 rounded-2xl flex justify-center items-center gap-2 ${
+              className={`hover:animate-shake hover:bg-appViolet hover:text-white cursor-default border border-appPrimary px-6 py-2 rounded-2xl flex justify-center items-center gap-2 text-sm lg:text-base ${
                 theme.isDark ? "text-appLightGray" : "text-appBlack"
               }`}
             >
-              <Icon icon={option.icon} className="text-3xl" />
+              <Icon
+                icon={option.icon}
+                className="text-lg md:text-xl lg:text-3xl"
+              />
               <h6>{option.name}</h6>
             </motion.div>
           ))}
