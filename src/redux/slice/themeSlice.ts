@@ -1,29 +1,26 @@
 // src/store/userSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ThemeProps } from "../../types";
+
 
 interface ThemeState {
-  theme: ThemeProps | null;
+  isDark: boolean;
 }
 
 const initialState: ThemeState = {
-  theme: null,
+  isDark: false,
 };
 
 const themeSlice = createSlice({
-  name: "theme",
+  name: "isDark",
   initialState,
   reducers: {
-    setTheme: (state, action: PayloadAction<ThemeState["theme"]>) => {
-      state.theme = action.payload;
-    },
-    clearTheme: (state) => {
-      state.theme = null;
+    setTheme: (state, action: PayloadAction<ThemeState["isDark"]>) => {
+      state.isDark = action.payload;
     },
   },
 });
 
-export const { setTheme, clearTheme } = themeSlice.actions;
-export const selectTheme = (state: { theme: ThemeState }) =>
-  state.theme.theme ?? null;
+export const { setTheme } = themeSlice.actions;
+export const selectTheme = (state: { isDark: ThemeState }) =>
+  state.isDark;
 export default themeSlice.reducer;

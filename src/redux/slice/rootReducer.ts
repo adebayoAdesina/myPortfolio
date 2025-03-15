@@ -1,9 +1,9 @@
 // src/store/rootReducer.ts
-import { combineReducers } from '@reduxjs/toolkit';
-import themeSlice from './themeSlice';
+import { combineReducers } from "@reduxjs/toolkit";
+import themeSlice from "./themeSlice";
 
 const rootReducer = combineReducers({
-  theme:themeSlice 
+  isDark: themeSlice,
   // Add other reducers as needed
 });
 

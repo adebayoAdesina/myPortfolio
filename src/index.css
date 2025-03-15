@@ -1,4 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Londrina+Outline&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.code-animation {
+  animation: codeFrame 50s ease-in infinite;
+}
+
+@keyframes codeFrame {
+  0% {
+    transform: translateY(-50vh) translateX(0vw);
+  }
+  15% {
+    transform: translateY(0) translateX(20vw);
+  }
+  30% {
+    transform: translateY(-20vh) translateX(40vw);
+  }
+  45% {
+    transform: translateY(0) translateX(60vw);
+  }
+  60% {
+    transform: translateY(-30vh) translateX(80vw);
+  }
+  75% {
+    transform: translateY(10vh) translateX(100vw);
+  }
+  100% {
+    transform: translateY(-50vh) translateX(0vw);
+  }
+}
+
+
+.bg-line {
+  position: relative;
+}
+.bg-line::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 3px;
+  background-color: #006ace;
+}
+
+/* @keyframes codeFrame {
+  0% {
+    transform: translateY(-50vh) translateX(0vw);
+  }
+  10% {
+    transform: translateY(0) translateX(10vw);
+  }
+  15% {
+    transform: translateY(-10vh) translateX(30vw);
+  }
+  20% {
+    transform: translateY(0vh) translateX(40vw);
+  }
+  25% {
+    transform: translateY(-20vh) translateX(50vw);
+  }
+  35% {
+    transform: translateY(0vh) translateX(60vw);
+  }
+  40% {
+    transform: translateY(0) translateX(60vw);
+  }
+  45% {
+    transform: translateY(-30vh) translateX(80vw);
+  }
+
+  50% {
+    transform: translateY(-30vh) translateX(100vw);
+  }
+  75% {
+    transform: translateY(10vh) translateX(80vw);
+  }
+  100% {
+    transform: translateY(-50vh) translateX(-300px);
+  }
+}
+ */
