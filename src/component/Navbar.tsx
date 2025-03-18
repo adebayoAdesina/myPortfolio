@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { selectTheme, setTheme } from "../redux/slice/themeSlice";
 import { navItem } from "../type/type";
 import { catCup } from "../constant/appImage";
+import { scroller } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -15,40 +16,25 @@ const Navbar = () => {
   const navItems: navItem[] = [
     {
       label: "Home",
-      path: "/",
-      onclick: () => {
-        setNav(false);
-      },
+      id: '#home',
     },
 
     {
       label: "About",
-      path: "/about",
-      onclick: () => {
-        setNav(false);
-      },
+      id: "#about",
     },
     {
       label: "Projects",
-      path: "/projects",
-      onclick: () => {
-        setNav(false);
-      },
+      id: "#projects",
     },
     {
       label: "Skills",
-      path: "/skills",
-      onclick: () => {
-        setNav(false);
-      },
+      id: "#skills",
     },
 
     {
       label: "Contact",
-      path: "/contact",
-      onclick: () => {
-        setNav(false);
-      },
+      id: "#contact",
     },
   ];
 
@@ -66,6 +52,15 @@ const Navbar = () => {
   };
   window.addEventListener("scroll", changeBackground);
 
+  const scrollTo = (id: string, duration: number) => {
+    setTimeout(() => {
+      scroller.scrollTo(id, {
+        duration: duration,
+        smooth: true,
+        delay: 500,
+      });
+    }, 100);
+  };
   return (
     <nav
       className={`lg:py-10 py-5 sticky top-0 z-50 container mx-auto ${
@@ -88,19 +83,22 @@ const Navbar = () => {
           </Link>
           <ul className="lg:flex hidden lg:gap-x-7 text-base sm:text-sm">
             {navItems.map((item, index) => (
-              <li key={index}>
-                <Link
-                  to={item.path}
-                  className={
-                    location.pathname === item.path
-                      ? theme.isDark
-                        ? "text-[#fafefe] font-bold"
-                        : "text-[#111111] font-bold"
-                      : ""
+              <li
+                key={index}
+                onClick={() => {
+                  if (item.id) {
+                    scrollTo(item.id, index * 100);
                   }
-                >
-                  {item.label}
-                </Link>
+                }}
+                className={`font-bold cursor-pointer ${
+                  location.pathname === item.id
+                    ? theme.isDark
+                      ? "text-[#fafefe]"
+                      : "text-[#111111]"
+                    : ""
+                }`}
+              >
+                {item.label}
               </li>
             ))}
           </ul>
@@ -133,7 +131,11 @@ const Navbar = () => {
                     theme.isDark ? "text-appLightGray" : "text-appBlack"
                   }`}
                 >
-                  GitHub
+                  <div className="glitch-wrapper">
+                    <div className="glitch" data-glitch="GitHub">
+                      GitHub
+                    </div>
+                  </div>
                 </button>
               </div>
             </a>
@@ -164,16 +166,16 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col gap-y-6 mt-8 text-sm sm:text-base">
               {navItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.path}
-                    onClick={item.onclick}
-                    className={
-                      location.pathname === item.path ? "text-appGreen" : ""
-                    }
-                  >
-                    {item.label}
-                  </Link>
+                <li
+                  key={index}
+                  onClick={() => {
+                    setNav(false);
+                  }}
+                  className={
+                    location.pathname === item.id ? "text-appGreen" : ""
+                  }
+                >
+                  {item.label}
                 </li>
               ))}
             </ul>

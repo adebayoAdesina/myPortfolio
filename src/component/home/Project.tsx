@@ -4,7 +4,7 @@ import HeaderAndSubHeader from "../HeaderAndSubHeader";
 
 const Project = () => {
   return (
-    <section>
+    <section id="#projects">
       <div className="container mx-auto">
         <div className="flex justify-center group ">
           <img

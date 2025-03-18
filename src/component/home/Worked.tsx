@@ -9,18 +9,20 @@ const Worked = () => {
   return (
     <section className="flex flex-col justify-center container mx-auto py-10">
       <HeaderAndSubHeader header="Where I've" subHeader="Worked" />
-      <div className="flex flex-col gap-2 my-10">
+      <div className="flex flex-col gap-2 my-2 sm:my-6 md:my-10">
         {workedData.map((item, index) => (
           <div
             key={index + item.company}
-            className={`w-full flex ${index % 2 && "lg:flex-row-reverse"}`}
+            className={`w-full flex ${index % 2 && "flex-row-reverse"}`}
           >
             <div className="w-ful lg:w-1/2 p-4 flex justify-center">
-              {index % 2 && (
+              {index % 2 ? (
                 <Icon
                   icon="ph:flow-arrow"
                   className="hidden lg:flex text-5xl translate-y-9 translate-x-2 text-appPrimary rotate-180"
                 />
+              ) : (
+                <></>
               )}
               <div className="w-full lg:w-11/12 border rounded-2xl p-6">
                 <h4 className="text-2xl font-bold text-appPrimary">
@@ -84,9 +86,9 @@ const Worked = () => {
                 ""
               )}
             </div>
-            <div className="w-52 flex justify-center lg:bg-line">
+            <div className="lg:w-52 flex flex-col lg:flex-row justify-center bgs-line">
               <div
-                className={`border rounded-full flex justify-center items-center p-4 w-[60px] h-[60px] z-10 ${
+                className={`border rounded-full flex justify-center items-center p-4 w-[50px] h-[50px] md:w-[60px] md:h-[60px] z-10 ${
                   index % 2 ? "mt-5 lg:mt-14" : "mt-5"
                 } bg-appPrimary`}
               >

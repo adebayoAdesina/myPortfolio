@@ -8,7 +8,7 @@ const Contact = () => {
   const theme = useSelector(selectTheme);
 
   return (
-    <section className="py-4 sm:py-6 md:py-8 lg:py-10">
+    <section className="py-4 sm:py-6 md:py-8 lg:py-10" id="#contact">
       <div className="flex flex-col container mx-auto justify-center items-center gap-3">
         <p
           className={`tracking-wide text-base sm:text-lg lg:text-xl font-semibold max-w-[800px] mx-4 text-center ${
@@ -40,7 +40,10 @@ const Contact = () => {
               key={option.icon}
               className="flex flex-col gap-2 justify-center items-center"
             >
-              <Icon icon={option.icon} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl" />
+              <Icon
+                icon={option.icon}
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+              />
               <p
                 className={`text-sm md:text-base font-semibold tracking-wide ${
                   theme.isDark ? "text-appWhite" : "text-appBlack"

@@ -26,7 +26,7 @@ const HeroSection = () => {
         ),
       }}
     >
-      <motion.section className="cursor-none overflow-hidden">
+      <motion.section className="cursor-none overflow-hidden" id="#home">
         <div className="px-4 sm:px-8 lg:px-0 lg:container mx-auto pt-8 pb-1 overflow-hidden">
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 flex flex-col text-center sm:text-start gap-3 sm:gap-4 md:gap-5 ">

@@ -30,7 +30,10 @@ const Learned = () => {
   const isInView = useInView(ref, { margin: "-250px" });
 
   return (
-    <section className="sm:py-5 px-4 sm:px-8 lg:px-0 lg:container mx-auto">
+    <section
+      className="sm:py-5 px-4 sm:px-8 lg:px-0 lg:container mx-auto"
+      id="skills"
+    >
       <div className="flex">
         <img src={cube} alt="cube rotating" />
       </div>
@@ -61,12 +64,12 @@ const Learned = () => {
           {filteredData.map((option, id) => (
             <motion.div
               key={id}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0.2 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{
-                delay: id * 0.1,
+                delay: id * 0.05,
                 duration: 0.3,
-                ease: "easeOut",
+                ease: "easeInOut",
               }}
               className={`hover:animate-shake hover:bg-appViolet hover:text-white cursor-default border border-appPrimary px-6 py-2 rounded-2xl flex justify-center items-center gap-2 text-sm lg:text-base ${
                 theme.isDark ? "text-appLightGray" : "text-appBlack"
