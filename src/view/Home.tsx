@@ -12,15 +12,14 @@ import { Helmet } from "react-helmet-async";
 
 /**
  * Home Component
- * 
- * This component serves as the main entry point for the portfolio application, 
- * rendering the navigation bar, hero section, learned skills, projects, 
- * work experience, contact information, and footer. It utilizes the 
- * Redux store to manage theme state and applies SEO-friendly metadata 
+ *
+ * This component serves as the main entry point for the portfolio application,
+ * rendering the navigation bar, hero section, learned skills, projects,
+ * work experience, contact information, and footer. It utilizes the
+ * Redux store to manage theme state and applies SEO-friendly metadata
  * using the Helmet component.
  */
 const Home = () => {
-
   const theme = useSelector(selectTheme);
   return (
     <>
