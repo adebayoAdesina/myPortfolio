@@ -6,19 +6,28 @@ import { selectTheme, setTheme } from "../redux/slice/themeSlice";
 import { navItem } from "../type/type";
 import { catCup } from "../constant/appImage";
 import { scroller } from "react-scroll";
+import resumePDF from "../assets/resume/Adebayo_Adesina_Joseph_CV.pdf";
 
+/**
+ * Navbar Component
+ *
+ * This component implements the navigation bar for the application. It includes links
+ * to different sections of the page (Home, About, Projects, Skills, Contact) and
+ * features a theme toggle button. The component also supports a mobile menu for
+ * responsive design and utilizes Redux for theme management. Smooth scrolling is
+ * implemented for navigation between sections.
+ */
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const theme = useSelector(selectTheme);
+  const theme = useSelector(selectTheme); // getting state oof the theme
   const dispatch = useDispatch();
   const location = useLocation();
 
   const navItems: navItem[] = [
     {
       label: "Home",
-      id: '#home',
+      id: "#home",
     },
-
     {
       label: "About",
       id: "#about",
@@ -36,7 +45,7 @@ const Navbar = () => {
       label: "Contact",
       id: "#contact",
     },
-  ];
+  ]; // List of the nav bar buttons
 
   function changeTheme(): void {
     dispatch(setTheme(!theme.isDark));
@@ -50,7 +59,7 @@ const Navbar = () => {
       setNavSize(false);
     }
   };
-  window.addEventListener("scroll", changeBackground);
+  window.addEventListener("scroll", changeBackground); //Function to change the size of the component when it is more than 100px
 
   const scrollTo = (id: string, duration: number) => {
     setTimeout(() => {
@@ -60,7 +69,8 @@ const Navbar = () => {
         delay: 500,
       });
     }, 100);
-  };
+  }; // Function for scrolling to a particluar section using react scroll
+
   return (
     <nav
       className={`lg:py-10 py-5 sticky top-0 z-50 container mx-auto ${
@@ -142,7 +152,6 @@ const Navbar = () => {
           </div>
 
           {/* mobile menu */}
-
           {/* side drawer menu */}
           <div
             className={
@@ -180,9 +189,11 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="my-3">
-              <button className=" mt-5 bg-linear-gradient text-sm text-[#323232] py-3 px-5 rounded-full hover:bg-transparent hover:border hover:border-appGreen hover:text-appGreen hover:ease-in-out hover:duration-300">
-                Download CV
-              </button>
+              <a href={resumePDF} download={"Adebayo_Adesina_CV.pdf"}>
+                <button className=" mt-5 bg-linear-gradient text-sm text-[#323232] py-3 px-5 rounded-full hover:bg-transparent hover:border hover:border-appGreen hover:text-appGreen hover:ease-in-out hover:duration-300">
+                  Download CV
+                </button>
+              </a>
             </div>
           </div>
         </div>

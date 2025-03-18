@@ -1,4 +1,3 @@
-// src/store/userSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
@@ -6,7 +5,15 @@ interface ThemeState {
   isDark: boolean;
 }
 
+/**
+ * Theme Slice
+ * 
+ * This slice manages the theme state of the application, specifically whether the 
+ * theme is dark or light. It includes an initial state, a reducer to set the theme, 
+ * and a selector to access the current theme state.
+ */
 const initialState: ThemeState = {
+
   isDark: true,
 };
 

@@ -5,10 +5,19 @@ import { UpdateFollower } from "react-mouse-follower";
 import { socialsData } from "../../constant/socialsData";
 import { josephAdebayoImage } from "../../constant/appImage";
 import { motion } from "framer-motion";
+import resumePDF from "../../assets/resume/Adebayo_Adesina_Joseph_CV.pdf";
 
+/**
+ * HeroSection Component
+ * 
+ * This component serves as the hero section of the portfolio, 
+ * displaying a greeting, a brief introduction, a download button 
+ * for the CV, and social media links. It utilizes animations and 
+ * theme management to enhance the user experience.
+ */
 const HeroSection = () => {
-  const theme = useSelector(selectTheme);
 
+  const theme = useSelector(selectTheme);
   return (
     <UpdateFollower
       mouseOptions={{
@@ -65,7 +74,7 @@ const HeroSection = () => {
                 functionality.
               </p>
               <div className="flex justify-center sm:justify-start mt-6">
-                <a href="/resume.pdf" download={"Adebayo_Adesina_CV.pdf"}>
+                <a href={resumePDF} download={"Adebayo_Adesina_CV.pdf"}>
                   <button className="bg-appPrimary px-6 py-2 text-white animate-bounce">
                     Download CV
                   </button>

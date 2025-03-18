@@ -8,7 +8,16 @@ interface HeaderAndSubHeaderProps {
   subHeader: string;
 }
 
+/**
+ * HeaderAndSubHeader Component
+ * 
+ * This component displays a header and a subheader with animation effects. 
+ * It utilizes Redux for theme management and Framer Motion for animations, 
+ * allowing the headers to fade in and slide into view when they come into 
+ * the viewport.
+ */
 const HeaderAndSubHeader: React.FC<HeaderAndSubHeaderProps> = ({
+
   header,
   subHeader,
 }) => {

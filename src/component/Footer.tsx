@@ -4,7 +4,15 @@ import { socialsData } from "../constant/socialsData";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../redux/slice/themeSlice";
 
+/**
+ * Footer Component
+ * 
+ * This component implements the footer of the application. It displays the current 
+ * year, a copyright notice, the current time, and social media icons linked to 
+ * various platforms. The component utilizes Redux for theme management.
+ */
 const Footer = () => {
+
   const theme = useSelector(selectTheme);
 
   const [time, setTime] = useState<string>("");

@@ -8,7 +8,16 @@ import { selectTheme } from "../redux/slice/themeSlice";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/**
+ * AnimatedBoxes Component
+ * 
+ * This component displays animated boxes containing project images, descriptions, 
+ * and tools used for each project. It utilizes GSAP for animations and Redux for 
+ * theme management, allowing users to select different images for each project 
+ * and providing links to GitHub and live websites.
+ */
 const AnimatedBoxes: React.FC = () => {
+
   const boxesRef = useRef<HTMLDivElement[]>([]);
   const theme = useSelector(selectTheme);
 

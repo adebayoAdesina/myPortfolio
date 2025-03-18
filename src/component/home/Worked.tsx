@@ -4,7 +4,16 @@ import { workedData } from "../../constant/workedData";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../redux/slice/themeSlice";
 
+/**
+ * Worked Component
+ * 
+ * This component displays a list of work experiences, including the role, 
+ * company, duration, and skills associated with each position. It utilizes 
+ * Redux for theme management and provides a visually structured layout for 
+ * presenting work history.
+ */
 const Worked = () => {
+
   const theme = useSelector(selectTheme);
   return (
     <section className="flex flex-col justify-center container mx-auto py-10">

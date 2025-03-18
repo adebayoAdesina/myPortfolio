@@ -7,6 +7,17 @@ import { learnedData } from "../../constant/learnedData";
 import { cube } from "../../constant/appImage";
 import { motion, useInView } from "framer-motion";
 
+
+/**
+ * Learned Component
+ * 
+ * This component displays a section showcasing the skills that have been learned.
+ * It allows users to filter the displayed skills by category (All, Language, Front-end, 
+ * Backend-end, Others) and utilizes Redux for theme management and Framer Motion for 
+ * animations. The skills are represented with icons and names, providing a visually 
+ * engaging way to present the learned skills.
+ */
+
 const Learned = () => {
   const theme = useSelector(selectTheme);
 
