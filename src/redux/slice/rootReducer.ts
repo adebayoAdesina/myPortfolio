@@ -1,4 +1,3 @@
-// src/store/rootReducer.ts
 import { combineReducers } from "@reduxjs/toolkit";
 import themeSlice from "./themeSlice";
 

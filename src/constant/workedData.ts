@@ -1,6 +1,15 @@
 import { workedType } from "../type/type";
 
+/**
+ * workedData
+ * 
+ * This file exports an array of objects representing various work experiences, 
+ * including the role, company, work description, skills, and duration for each 
+ * position. This data structure is used to display a list of work experiences 
+ * in the application.
+ */
 export const workedData: workedType[] = [
+
   {
     role: "Front-end Website Developer",
     company: "Geecore Limited",

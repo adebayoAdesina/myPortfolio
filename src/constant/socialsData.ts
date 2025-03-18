@@ -3,7 +3,15 @@ export interface socialType {
   link?: string;
 }
 
+/**
+ * socialsData
+ * 
+ * This file exports an array of social media objects, 
+ * each containing an icon and a link. This data structure 
+ * is used to display social media links in the application.
+ */
 export const socialsData: socialType[] = [
+
   {
     icon: "ri:linkedin-fill",
     link: "https://www.linkedin.com/in/adebayo-adesina-547491206/",

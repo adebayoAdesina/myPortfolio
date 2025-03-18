@@ -17,7 +17,16 @@ import {
   wivali3,
 } from "./appImage";
 
+/**
+ * projectData
+ * 
+ * This file exports an array of objects representing various projects, 
+ * including details such as the title, description, images, links, 
+ * and tools used for each project. This data structure is used to 
+ * display a list of projects in the application.
+ */
 export const projectData: ProjectType[] = [
+
   {
     title: "Wivali AI-Powered Website Builder",
     description: `

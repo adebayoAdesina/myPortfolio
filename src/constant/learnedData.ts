@@ -1,6 +1,14 @@
 import { learnedType } from "../type/type";
 
+/**
+ * learnedData
+ * 
+ * This file exports an array of objects representing various programming languages 
+ * and tools, each with an associated icon, name, and type. This data structure 
+ * is used to display a list of skills or technologies in the application.
+ */
 export const learnedData: learnedType[] = [
+
   {
     icon: "devicon:java",
     name: "Java",

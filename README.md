@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio project! This project showcases my work, skills, and experiences as a developer. It includes various projects I've contributed to, along with descriptions and links to live demos.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [Forking and Starring the Repo](#forking-and-starring-the-repo)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+To get a local copy of this project up and running, follow these simple steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repo
+   ```bash
+   git clone git@github.com:adebayoAdesina/myPortfolio.git
+   ```
+2. Navigate to the project directory
+   ```bash
+   cd myPortfolio
+   ```
+3. Install the required dependencies
+   ```bash
+   npm install
+   ```
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+## Contributing
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Fork the Project
+2. Create your Feature Branch
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. Commit your Changes
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. Push to the Branch
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. Open a Pull Request
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## TODO
+  - 404 Page.
+  - More complex animation.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contact
+
+You can reach me at:
+- Email: adebayoadesina789@gmail.com
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/adebayo-adesina-547491206/)
+
+## Forking and Starring the Repo
+
+If you like this project, please consider forking it and giving it a star! This helps others discover the project and encourages collaboration.
+
+
+>Thank you for checking out my portfolio! 👍👍
+
+
+[LIVE LINK 🎯](https://adebayoadesina.netlify.app/)

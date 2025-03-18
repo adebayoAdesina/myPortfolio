@@ -2,9 +2,17 @@ import { josephAdebayoImage } from "../../constant/appImage";
 import AnimatedBoxes from "../AnimatedBoxes";
 import HeaderAndSubHeader from "../HeaderAndSubHeader";
 
+/**
+ * Project Component
+ * 
+ * This component serves as a section for displaying projects. It includes an 
+ * image, a header and subheader, and utilizes the AnimatedBoxes component 
+ * to showcase various projects.
+ */
 const Project = () => {
+
   return (
-    <section>
+    <section id="#projects">
       <div className="container mx-auto">
         <div className="flex justify-center group ">
           <img
