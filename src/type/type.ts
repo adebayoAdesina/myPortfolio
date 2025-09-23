@@ -20,6 +20,14 @@ export interface workedType {
   skills: skillType[];
   dateFrom: string;
   dateTo: string;
+  type: (
+    | "HYBRID"
+    | "REMOTE"
+    | "FULL-TIME"
+    | "CONTRACT"
+    | "I.T (Industrial Training)"
+    | "INTERN"
+  )[];
 }
 
 export interface ProjectType {
@@ -27,7 +35,7 @@ export interface ProjectType {
   description: string;
   image: string[];
   links: CustomLink;
-  tools: skillType[]
+  tools: skillType[];
 }
 
 export interface CustomLink {

@@ -74,7 +74,7 @@ const Navbar = () => {
   return (
     <nav
       className={`lg:py-10 py-5 sticky top-0 z-50 container mx-auto ${
-        navSize ? "px-5 lg:px-10" : "px-0"
+        navSize ? "px-5 lg:px-16 animate-fadeIn" : "px-0"
       } transition-all duration-500`}
     >
       <header

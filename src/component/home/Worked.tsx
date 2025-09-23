@@ -6,14 +6,13 @@ import { selectTheme } from "../../redux/slice/themeSlice";
 
 /**
  * Worked Component
- * 
- * This component displays a list of work experiences, including the role, 
- * company, duration, and skills associated with each position. It utilizes 
- * Redux for theme management and provides a visually structured layout for 
+ *
+ * This component displays a list of work experiences, including the role,
+ * company, duration, and skills associated with each position. It utilizes
+ * Redux for theme management and provides a visually structured layout for
  * presenting work history.
  */
 const Worked = () => {
-
   const theme = useSelector(selectTheme);
   return (
     <section className="flex flex-col justify-center container mx-auto py-10">
@@ -34,14 +33,14 @@ const Worked = () => {
                 <></>
               )}
               <div className="w-full lg:w-11/12 border rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-appPrimary">
-                  {item.role}
-                </h4>
-                <h5
-                  className={`text-lg font-medium ${
+                <h4
+                  className={`text-base md:text-lg font-bold ${
                     theme.isDark ? "text-appLightGray" : "text-appBlack"
                   }`}
                 >
+                  {item.role}
+                </h4>
+                <h5 className={`text-xl font-bold text-appPrimary`}>
                   {item.company}
                 </h5>
                 <p
@@ -112,13 +111,22 @@ const Worked = () => {
                 index % 2 ? "justify-end" : "justify-start"
               } items-center`}
             >
-              <p
-                className={`font-medium italic ${
-                  theme.isDark ? "text-appWhite" : "text-appBlack"
-                }`}
-              >
-                {item.dateFrom} - {item.dateTo}.
-              </p>
+              <div className="flex flex-col">
+                <p
+                  className={`font-medium italic ${
+                    theme.isDark ? "text-appWhite" : "text-appBlack"
+                  }`}
+                >
+                  {item.dateFrom} - {item.dateTo}.
+                </p>
+                <p
+                  className={`font-light text-sm italic ${
+                    theme.isDark ? "text-appWhite" : "text-appBlack"
+                  } ${index % 2 ? "text-right" : "text-left"}`}
+                >
+                  {item.type.join(", ")}
+                </p>
+              </div>
             </div>
           </div>
         ))}

@@ -54,6 +54,10 @@ export default {
             transformOrigin: "20px 50px",
           },
         },
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(-25px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         rotate: "rotate 10s linear infinite",
@@ -61,6 +65,7 @@ export default {
         combineRotateHeartPulse:
           "combineRotateHeartPulse 30s ease-in-out infinite",
         shake: "shake 0.5s infinite",
+        fadeIn: "fadeIn 1s ease-out",
       },
     },
   },
