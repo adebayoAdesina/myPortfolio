@@ -16,17 +16,17 @@ import {
   wivali2,
   wivali3,
 } from "./appImage";
+import { skillData } from "./skillData";
 
 /**
  * projectData
- * 
- * This file exports an array of objects representing various projects, 
- * including details such as the title, description, images, links, 
- * and tools used for each project. This data structure is used to 
+ *
+ * This file exports an array of objects representing various projects,
+ * including details such as the title, description, images, links,
+ * and tools used for each project. This data structure is used to
  * display a list of projects in the application.
  */
 export const projectData: ProjectType[] = [
-
   {
     title: "Wivali AI-Powered Website Builder",
     description: `
@@ -49,19 +49,12 @@ export const projectData: ProjectType[] = [
       website: "https://www.wivali.ai/",
     },
     tools: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      { icon: "devicon:typescript", name: "TypeScript" },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
+      skillData.react,
+      skillData.typescript,
+      skillData.tailwind,
+      skillData.redux,
+      skillData.framer_motion,
+      skillData.git,
     ],
   },
   {
@@ -71,6 +64,7 @@ export const projectData: ProjectType[] = [
             <p class="description">
             As a freelance frontend developer, I took on a side gig to design and develop the user dashboard, admin dashboard, and the Aviator game for an innovative betting website. My contributions included:
             </p>
+            </br>
             <ul class="description">
             <li><strong>User Dashboard:</strong> Created a user-friendly interface for staking games, tracking games, funding and withdrawing game funds.</li>
                 <li><strong>Admin Dashboard:</strong> Developed a robust admin panel for managing users, settings, and overall platform administration.</li>
@@ -86,22 +80,14 @@ export const projectData: ProjectType[] = [
       website: "https://gbetpools.com/",
     },
     tools: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:typescript",
-        name: "TypeScript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
+      skillData.flutter,
+      skillData.dart,
+      skillData.react,
+      skillData.typescript,
+      skillData.tailwind,
+      skillData.redux,
+      skillData.git,
+      skillData.firebase,
     ],
   },
   {
@@ -111,6 +97,7 @@ export const projectData: ProjectType[] = [
             <p class="description">
                As a freelance frontend developer, I contributed to the design and development of Arimart, an online marketplace dedicated to bringing authentic African ingredients to users' kitchens. My contributions included:
             </p>
+            </br>
             <ul class="description">
                 <li><strong>User Dashboard:</strong> Developed an intuitive user interface for managing orders, tracking deliveries, and accessing account information.</li>
                 <li><strong>Admin Dashboard:</strong> Created a robust admin panel for managing products, categories, users, and orders, ensuring smooth operations for the marketplace.</li>
@@ -125,22 +112,11 @@ export const projectData: ProjectType[] = [
       website: "https://iterlen.netlify.app/",
     },
     tools: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:typescript",
-        name: "TypeScript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
+      skillData.react,
+      skillData.typescript,
+      skillData.tailwind,
+      skillData.redux,
+      skillData.git,
     ],
   },
   {
@@ -159,22 +135,11 @@ export const projectData: ProjectType[] = [
       github: "https://github.com/adebayoAdesina/GetlinkedChallenge",
     },
     tools: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:css3",
-        name: "CSS",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
+      skillData.react,
+      skillData.javascript,
+      skillData.css,
+      skillData.git,
+      skillData.redux,
     ],
   },
   {
@@ -193,22 +158,10 @@ export const projectData: ProjectType[] = [
       github: "https://github.com/adebayoAdesina/space-tourism-website",
     },
     tools: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:css3",
-        name: "CSS",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
+      skillData.react,
+      skillData.javascript,
+      skillData.css,
+      skillData.redux,
     ],
   },
   {
@@ -218,6 +171,7 @@ export const projectData: ProjectType[] = [
            <p class="description">
                I designed and developed a fully functional Tic Tac Toe game, showcasing my skills in front-end development and user interface design. This project demonstrates my ability to create interactive and engaging web applications.
             </p>
+            </br>
             <ul class="description">
                 <li><strong>User-Friendly Interface:</strong> The game features a clean and intuitive interface, allowing users to easily enter their information, select their symbols, and start playing.</li>
                 <li><strong>Responsive Design:</strong> Ensured the game is responsive and works seamlessly across various devices, from desktops to mobile phones.</li>
@@ -234,19 +188,6 @@ export const projectData: ProjectType[] = [
       website: "https://tic-tac-toe789.netlify.app/",
       github: "https://github.com/adebayoAdesina/Draw-Game-Tic-Tac-Toe",
     },
-    tools: [
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:css3",
-        name: "CSS",
-      },
-      {
-        icon: "devicon:html5",
-        name: "HTML",
-      },
-    ],
+    tools: [skillData.javascript, skillData.css, skillData.git, skillData.html],
   },
 ];

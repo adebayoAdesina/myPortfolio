@@ -1,112 +1,108 @@
 import { learnedType } from "../type/type";
+import { skillData } from "./skillData";
 
 /**
  * learnedData
- * 
- * This file exports an array of objects representing various programming languages 
- * and tools, each with an associated icon, name, and type. This data structure 
+ *
+ * This file exports an array of objects representing various programming languages
+ * and tools, each with an associated icon, name, and type. This data structure
  * is used to display a list of skills or technologies in the application.
  */
 export const learnedData: learnedType[] = [
-
   {
-    icon: "devicon:java",
-    name: "Java",
+    ...skillData.csharp,
     type: ["All", "Language", "Backend-end", "Front-end"],
   },
   {
-    icon: "devicon:flutter",
-    name: "Flutter",
+    ...skillData.dotnet,
+    type: ["All", "Language", "Backend-end", "Front-end"],
+  },
+  {
+    ...skillData.java,
+    type: ["All", "Language", "Backend-end", "Front-end"],
+  },
+  {
+    ...skillData.flutter,
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "devicon:dart",
-    name: "Dart",
+    ...skillData.dart,
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "devicon:react",
-    name: "React",
+    ...skillData.react,
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "devicon:javascript",
-    name: "JavaScript",
+    ...skillData.javascript,
+
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "devicon:typescript",
-    name: "TypeScript",
+    ...skillData.typescript,
+
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "devicon:git",
-    name: "Git",
+    ...skillData.git,
+
     type: ["All", "Others"],
   },
   {
-    icon: "simple-icons:springboot",
-    name: "Springboot",
+    ...skillData.springboot,
     type: ["All", "Language", "Backend-end"],
   },
   {
-    icon: "devicon:postgresql",
-    name: "postgresql",
+    ...skillData.postgresql,
     type: ["All", "Language", "Backend-end"],
   },
   {
-    icon: "devicon:mysql",
-    name: "MySQL",
+    ...skillData.mysql,
+
     type: ["All", "Language", "Backend-end"],
   },
   {
-    icon: "devicon:html5",
-    name: "HTML",
+    ...skillData.firebase,
+    type: ["All", "Language", "Backend-end"],
+  },
+  {
+    ...skillData.html,
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "devicon:css3",
-    name: "CSS",
+    ...skillData.css,
     type: ["All", "Language", "Front-end"],
   },
   {
-    icon: "ph:framer-logo-fill",
-    name: "Framer Motion",
+    ...skillData.framer_motion,
     type: ["All", "Front-end"],
   },
   {
-    icon: "devicon:tailwindcss",
-    name: "Tailwind",
+    ...skillData.tailwind,
     type: ["All", "Front-end"],
   },
   {
-    icon: "devicon:bootstrap",
-    name: "BootStrap",
+    ...skillData.bootstrap,
     type: ["All", "Front-end"],
   },
   {
-    icon: "devicon:redux",
-    name: "Redux",
+    ...skillData.redux,
     type: ["All", "Front-end"],
   },
   {
-    icon: "devicon:figma",
-    name: "Figma",
+    ...skillData.figma,
     type: ["All", "Front-end", "Others"],
   },
   {
-    icon: "ic:twotone-wordpress",
-    name: "Wordpress",
+    ...skillData.wordpress,
     type: ["All", "Front-end", "Others"],
   },
   {
-    icon: "devicon:sass",
-    name: "Sass",
+    ...skillData.sass,
     type: ["All", "Front-end", "Others"],
   },
   {
-    icon: "simple-icons:coreldraw",
-    name: "Corel Draw",
+    ...skillData.corel_draw,
     type: ["All", "Others"],
   },
 ];
