@@ -1,4 +1,5 @@
 import { workedType } from "../type/type";
+import { skillData } from "./skillData";
 
 /**
  * workedData
@@ -10,43 +11,28 @@ import { workedType } from "../type/type";
  */
 export const workedData: workedType[] = [
   {
-    role: "Frontend Website Developer",
+    role: "Backend Developer",
+    company: "AFT Solutions Limited",
+    workDescription: ".NET intern",
+    skills: [skillData.csharp, skillData.dotnet],
+    dateFrom: "November  2025",
+    dateTo: "Present",
+    type: ["HYBRID", "INTERN"],
+  },
+  {
+    role: "Frontend Software Developer",
     company: "CT'Lab Software Solutions",
     workDescription:
-      "Collaborated on multiple projects like companies website, gbetpools, hohaministries, okpools etc...",
+      "Collaborated on multiple projects like companies website, gbetpools, hohaministries, okpools and more",
     skills: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:flutter",
-        name: "Flutter",
-      },
-      {
-        icon: "devicon:dart",
-        name: "Dart",
-      },
-      {
-        icon: "devicon:typescript",
-        name: "Typscript",
-      },
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
-      {
-        icon: "devicon:git",
-        name: "Git",
-      },
+      skillData.react,
+      skillData.flutter,
+      skillData.dart,
+      skillData.typescript,
+      skillData.javascript,
+      skillData.tailwind,
+      skillData.redux,
+      skillData.git,
       {
         name: "Shadcn",
       },
@@ -61,27 +47,11 @@ export const workedData: workedType[] = [
     workDescription:
       "Contributed to the development of MaketMasta, a marketplace platform,collaborating with other developers to integrate frontend with backend endpoints. ii.	Implemented core e-commerce features including product listing, add-to-cart functionality, order creation, and order management.",
     skills: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:git",
-        name: "Git",
-      },
-      {
-        icon: "devicon:redux",
-        name: "Redux",
-      },
+      skillData.react,
+      skillData.javascript,
+      skillData.tailwind,
+      skillData.git,
+      skillData.redux,
       {
         name: "Shadcn",
       },
@@ -96,26 +66,11 @@ export const workedData: workedType[] = [
     workDescription:
       "Collaborated on multiple projects like companies website, website builder, Wivali AI, managed events. Contributed to the Vidxr Dashboard, an AI-powered video editing platform, enhancing frontend performance and user experience.",
     skills: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:typescript",
-        name: "Typscript",
-      },
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:git",
-        name: "Git",
-      },
+      skillData.react,
+      skillData.typescript,
+      skillData.javascript,
+      skillData.tailwind,
+      skillData.git,
       {
         name: "Three JS",
       },
@@ -130,41 +85,16 @@ export const workedData: workedType[] = [
     workDescription:
       "Collaborated with other developers to debug, optimize, and maintain software projects. Delivered solutions that improved functionality, user experience, and performance across client platforms.",
     skills: [
-      {
-        icon: "devicon:flutter",
-        name: "Flutter",
-      },
-      {
-        icon: "devicon:dart",
-        name: "Dart",
-      },
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:java",
-        name: "Java",
-      },
-      {
-        icon: "devicon:typescript",
-        name: "Typscript",
-      },
-      {
-        icon: "devicon:javascript",
-        name: "JavaScript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-
+      skillData.flutter,
+      skillData.dart,
+      skillData.react,
+      skillData.java,
+      skillData.typescript,
+      skillData.javascript,
+      skillData.tailwind,
+      skillData.git,
       {
         name: "Three JS",
-      },
-      {
-        icon: "devicon:git",
-        name: "Git",
       },
     ],
     dateFrom: "January 2024",
@@ -177,22 +107,10 @@ export const workedData: workedType[] = [
     workDescription:
       "Developed frontend features for gbetpools.com, covering user, agent, and admin website.",
     skills: [
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:typescript",
-        name: "Typscript",
-      },
-      {
-        icon: "devicon:tailwindcss",
-        name: "Tailwind",
-      },
-      {
-        icon: "devicon:git",
-        name: "Git",
-      },
+      skillData.react,
+      skillData.typescript,
+      skillData.tailwind,
+      skillData.git,
     ],
     dateFrom: "October 2024",
     dateTo: "Jan 2025",
@@ -203,24 +121,7 @@ export const workedData: workedType[] = [
     company: "SQI",
     workDescription:
       "Gained hands-on experience in React.js and Flutter during industrial training. Built foundational skills in web and mobile app development, focusing on frontend user interfaces.",
-    skills: [
-      {
-        icon: "devicon:flutter",
-        name: "Flutter",
-      },
-      {
-        icon: "devicon:dart",
-        name: "Dart",
-      },
-      {
-        icon: "devicon:react",
-        name: "React",
-      },
-      {
-        icon: "devicon:git",
-        name: "Git",
-      },
-    ],
+    skills: [skillData.flutter, skillData.dart, skillData.react, skillData.git],
     dateFrom: "August 2021",
     dateTo: "January 2022",
     type: ["I.T (Industrial Training)"],

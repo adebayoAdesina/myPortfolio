@@ -3,6 +3,7 @@ import HeaderAndSubHeader from "../HeaderAndSubHeader";
 import { workedData } from "../../constant/workedData";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../redux/slice/themeSlice";
+import ToolChip from "./ToolChip";
 
 /**
  * Worked Component
@@ -51,7 +52,7 @@ const Worked = () => {
                   {item.dateFrom} - {item.dateTo}.
                 </p>
                 <p
-                  className={`my-3 text-sm ${
+                  className={`my-3 text-xs sm:text-sm ${
                     theme.isDark ? "text-appLightGray" : "text-appBlack"
                   }`}
                 >
@@ -70,16 +71,7 @@ const Worked = () => {
                   <div>
                     <div className="flex gap-2 flex-wrap">
                       {item.skills.map((skill, id) => (
-                        <span
-                          key={id}
-                          className="bg-appLightGray text-appBlack rounded-sm px-3 flex items-center gap-1"
-                        >
-                          <Icon
-                            icon={skill.icon || ""}
-                            className="text-xl  text-appPrimary"
-                          />
-                          {skill.name}
-                        </span>
+                        <ToolChip id={id} tool={skill}/>
                       ))}
                     </div>
                   </div>
