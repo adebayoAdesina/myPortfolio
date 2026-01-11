@@ -14,12 +14,15 @@ const Project = () => {
   return (
     <section id="#projects">
       <div className="container mx-auto">
-        <div className="flex justify-center group ">
+        <div className="flex justify-center group">
+          <div className="h-[300px] w-[300px] rounded-full overflow-hidden">
+
           <img
             src={josephAdebayoImage}
             alt="Joseph Adebayo Image"
-            className="max-w-[400px]"
-          />
+            className="object-contain"
+            />
+            </div>
         </div>
         <div className="mt-5">
           <HeaderAndSubHeader

@@ -31,7 +31,7 @@ const TextDecription: React.FC<TextDescriptionProps> = ({
         ref={textRef}
         className={`${
           moreIndex === i ? "" : "line-clamp-5"
-        } text-justify opacity-95`}
+        } opacity-95`}
         dangerouslySetInnerHTML={{ __html: option.description }}
       />
       {isClamped && (moreIndex == i ? (

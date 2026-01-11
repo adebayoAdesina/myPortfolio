@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -22,34 +22,34 @@ const AnimatedBoxes: React.FC = () => {
   const boxesRef = useRef<HTMLDivElement[]>([]);
   const theme = useSelector(selectTheme);
 
-  useEffect(() => {
-    const boxes = boxesRef.current;
-    boxes.forEach((box) => {
-      gsap.to(box, {
-        scrollTrigger: {
-          trigger: box,
-          scrub: 1,
-          // end: "+=150",
-          start: "top 0%",
-          end: "top 10%",
-          pin: true,
-          endTrigger: "hidden",
-          toggleActions: "play none none reverse",
-          onEnter: ({ progress, direction, isActive }) =>
-            console.log(progress, direction, isActive),
-        },
-        x: 0,
-        y: 500,
-        opacity: 0,
-        display: "hidden",
-      });
-    });
+  // useEffect(() => {
+  //   const boxes = boxesRef.current;
+  //   boxes.forEach((box) => {
+  //     gsap.to(box, {
+  //       scrollTrigger: {
+  //         trigger: box,
+  //         scrub: 1,
+  //         // end: "+=150",
+  //         start: "top 0%",
+  //         end: "top 10%",
+  //         pin: true,
+  //         endTrigger: "hidden",
+  //         toggleActions: "play none none reverse",
+  //         onEnter: ({ progress, direction, isActive }) =>
+  //           console.log(progress, direction, isActive),
+  //       },
+  //       x: 0,
+  //       y: 500,
+  //       opacity: 0,
+  //       display: "hidden",
+  //     });
+  //   });
 
-    // Cleanup function to kill ScrollTrigger instances
-    return () => {
-      ScrollTrigger.getAll().forEach((instance) => instance.kill());
-    };
-  }, []);
+  //   // Cleanup function to kill ScrollTrigger instances
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((instance) => instance.kill());
+  //   };
+  // }, []);
 
   const [selectedImages, setSelectedImages] = useState<number[]>(
     projectData.map(() => 0)
@@ -85,7 +85,7 @@ const AnimatedBoxes: React.FC = () => {
               className={`flex flex-col ${i % 2 && "flex-col-reverse"} h-fit`}
             >
               <div className={`w-full flex flex-col`}>
-                <div className="flex h-72 bg-red-400">
+                <div className="flex h-72">
                   <img
                     src={option.image[selectedImages[i]]}
                     alt={option.title}

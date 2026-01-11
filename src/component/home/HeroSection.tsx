@@ -102,7 +102,7 @@ const HeroSection = () => {
                 <img
                   src={josephAdebayoImage}
                   alt="Joseph Adebayo Adesina image"
-                  className="w-10/12"
+                  className="w-10/12 max-h-[700px] object-cover rounded-full hover:rounded-sm hover:duration-1000"
                 />
               </div>
             </div>

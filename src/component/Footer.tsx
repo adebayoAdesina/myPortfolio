@@ -6,13 +6,12 @@ import { selectTheme } from "../redux/slice/themeSlice";
 
 /**
  * Footer Component
- * 
- * This component implements the footer of the application. It displays the current 
- * year, a copyright notice, the current time, and social media icons linked to 
+ *
+ * This component implements the footer of the application. It displays the current
+ * year, a copyright notice, the current time, and social media icons linked to
  * various platforms. The component utilizes Redux for theme management.
  */
 const Footer = () => {
-
   const theme = useSelector(selectTheme);
 
   const [time, setTime] = useState<string>("");
@@ -44,8 +43,8 @@ const Footer = () => {
             theme.isDark ? "text-appWhite" : "text-appBlack"
           }`}
         >
-          <div className="flex flex-row items-center sm:items-start sm:justify-start  justify-between w-full sm:flex-col mt-5 sm:mt-0">
-            <div className="flex items-center gap-1 text-xl">
+          <div className="flex flex-row items-center sm:items-start sm:justify-start  justify-between w-full sm:flex-col mt-5 sm:mt-0 text-sm sm:text-base md:text-lg px-4 sm:px-">
+            <div className="flex items-center gap-1  ">
               <Icon icon="si:copyright-alt-line" className="text-xl" />
               <div>
                 JADE &nbsp;
