@@ -7,7 +7,8 @@ import creaturesThree from "../assets/svg/creatures-12021_256.gif";
 import cat from "../assets/svg/cat-13812_256.gif";
 import cube from "../assets/svg/cube-11588_256.gif";
 import cartoonStudent from "../assets/svg/cartoon-student-13527_256.gif";
-import josephAdebayoImage from "../assets/image/portfolio.png";
+// import josephAdebayoImage from "../assets/image/portfolio.png";
+import josephAdebayoImage from "../assets/image/portfolio.webp";
 
 // project images
 import wivali1 from "../assets/image/projects/wivali/wivali.png";

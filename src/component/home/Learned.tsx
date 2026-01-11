@@ -56,7 +56,7 @@ const Learned = () => {
         {learnedButton.map((option, index) => (
           <motion.button
             onClick={() => setCurrentIndex(index)}
-            className={`px-5 py-2 rounded-t-3xl text-sm md:text-base ${
+            className={`px-5 py-1 md:py-2 rounded-t-3xl text-sm md:text-base ${
               theme.isDark
                 ? currentIndex == index
                   ? "bg-appPrimary text-white"
@@ -71,7 +71,7 @@ const Learned = () => {
         ))}
       </div>
       <div className=" min-h-60">
-        <div className="justify-center flex flex-wrap my-4 gap-2 md:gap-3 lg:gap-4 px-5 sm:px-8 md:px-12 lg:px-16">
+        <div className="justify-center flex flex-wrap my-4 gap-2 md:gap-3 lg:gap-4 px-3 sm:px-8 md:px-12 lg:px-16">
           {filteredData.map((option, id) => (
             <motion.div
               key={id}
@@ -82,7 +82,7 @@ const Learned = () => {
                 duration: 0.3,
                 ease: "easeInOut",
               }}
-              className={`hover:animate-shake hover:bg-appViolet hover:text-white cursor-default border border-appPrimary px-6 py-2 rounded-2xl flex justify-center items-center gap-2 text-sm lg:text-base ${
+              className={`hover:animate-shake hover:bg-appViolet hover:text-white cursor-default border border-appPrimary px-4 sm:px-6 py-1 sm:py-2 rounded-2xl flex justify-center items-center gap-2 text-xs sm:text-sm lg:text-base ${
                 theme.isDark ? "text-appLightGray" : "text-appBlack"
               }`}
             >
