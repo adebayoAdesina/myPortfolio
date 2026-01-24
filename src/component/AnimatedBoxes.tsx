@@ -52,12 +52,12 @@ const AnimatedBoxes: React.FC = () => {
   // }, []);
 
   const [selectedImages, setSelectedImages] = useState<number[]>(
-    projectData.map(() => 0)
+    projectData.map(() => 0),
   );
 
   const handleImageSelect = (cardIndex: number, imageIndex: number) => {
     setSelectedImages((prev) =>
-      prev.map((val, i) => (i === cardIndex ? imageIndex : val))
+      prev.map((val, i) => (i === cardIndex ? imageIndex : val)),
     );
   };
 
@@ -72,7 +72,7 @@ const AnimatedBoxes: React.FC = () => {
         {projectData.map((option, i) => (
           <div
             key={i}
-            className={`box w-full h-full border-2 shadow-inner rounded-3xl overflow-hidden ${
+            className={`box w-full h-full border-2 border-white/[0.3] shadow-inner rounded-3xl overflow-hidden ${
               theme.isDark == true ? "bg-appBlack text-appWhite" : "bg-white"
             } backdrop-blur-md bg-opacity-45 ${
               i > 0 ? "lg:mt-0 mt-[-100px]" : ""
@@ -109,13 +109,14 @@ const AnimatedBoxes: React.FC = () => {
                 </div>
               </div>
               <div className="w-full flex flex-col gap-2 justify-center p-6">
-                <h4
+                <a
+                  href={option.links.website}
                   className={`text-base md:text-xl font-bold ${
                     theme.isDark ? "text-white" : "text-appPrimary"
                   } underline underline-offset-8`}
                 >
                   {option.title}
-                </h4>
+                </a>
                 <TextDecription
                   i={i}
                   moreIndex={moreIndex}
@@ -141,24 +142,28 @@ const AnimatedBoxes: React.FC = () => {
                 </p>
                 <div className="flex flex-wrap mt-5 gap-5">
                   {option.links.github && (
-                    <a
-                      href={option.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`rounded-full border border-x-appTeal w-12 h-12 transform flex justify-center items-center shadow-inner group`}
-                      style={{
-                        rotate: `${Math.random() * 180}deg`,
-                      }}
-                    >
-                      <Icon
-                        icon="akar-icons:github-fill"
-                        className={`text-3xl ${
-                          theme.isDark ? "text-white" : "text-appPrimary"
-                        } group-hover:scale-150 group-hover:duration-500`}
-                      />
-                    </a>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={option.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`rounded-full border border-x-appTeal w-12 h-12 transform flex justify-center items-center shadow-inner group`}
+                        style={{
+                          rotate: `${Math.random() * 180}deg`,
+                        }}
+                      >
+                        <Icon
+                          icon="akar-icons:github-fill"
+                          className={`text-3xl ${
+                            theme.isDark ? "text-white" : "text-appPrimary"
+                          } group-hover:scale-150 group-hover:duration-500`}
+                        />
+                      </a>
+                      Github
+                    </div>
                   )}
                   {option.links.website && (
+                    <div className="flex items-center gap-2">
                     <a
                       href={option.links.website}
                       target="_blank"
@@ -175,6 +180,8 @@ const AnimatedBoxes: React.FC = () => {
                         } group-hover:scale-150 group-hover:duration-500`}
                       />
                     </a>
+                    Live link
+                </div>
                   )}
                 </div>
               </div>

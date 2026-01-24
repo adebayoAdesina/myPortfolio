@@ -7,6 +7,8 @@ import {
   gbetDownloadPage,
   getLinked1,
   getLinked2,
+  okpools1,
+  okpools2,
   spaceWebsite1,
   spaceWebsite2,
   spaceWebsite3,
@@ -88,6 +90,31 @@ export const projectData: ProjectType[] = [
       skillData.redux,
       skillData.git,
       skillData.firebase,
+    ],
+  },
+  {
+    title: "Okpools",
+    description: `
+        <div>
+            <p class="description">
+            I contributed significantly to the frontend development of OKPoolsBet, building responsive user interfaces, optimizing performance, and ensuring a seamless user experience across devices.
+            </p>
+            
+            <p class="description">
+                My role involved collaborating closely with the backend developer to ensure a cohesive and seamless user experience across all components. This project demonstrates my expertise in frontend development, user interface design, and creating engaging web applications.
+                </p>
+        </div>
+    `,
+    image: [okpools1, okpools2],
+    links: {
+      website: "https://okpoolsbet.com/",
+    },
+    tools: [
+      skillData.react,
+      skillData.typescript,
+      skillData.tailwind,
+      skillData.redux,
+      skillData.git,
     ],
   },
   {
