@@ -33,6 +33,8 @@ import spaceWebsite3 from "../assets/image/projects/space-website/spaceWebsite3.
 import ticTacToe1 from '../assets/image/projects/tic-tac-toe/tic-tac-toe1.png'
 import ticTacToe2 from '../assets/image/projects/tic-tac-toe/tic-tac-toe2.png'
 
+import okpools1 from "../assets/image/projects/okpools/screenshot-okpools.png"
+import okpools2 from "../assets/image/projects/okpools/screenshot-okpools2.png"
 export {
   coverImage,
   catCup,
@@ -59,4 +61,6 @@ export {
   spaceWebsite3,
   ticTacToe1,
   ticTacToe2,
+  okpools1,
+  okpools2
 };

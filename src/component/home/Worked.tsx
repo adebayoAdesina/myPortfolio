@@ -33,7 +33,7 @@ const Worked = () => {
               ) : (
                 <></>
               )}
-              <div className="w-full lg:w-11/12 border rounded-2xl p-6">
+              <div className="w-full lg:w-11/12 border border-white/[0.3] rounded-2xl p-6">
                 <h4
                   className={`text-base md:text-lg font-bold ${
                     theme.isDark ? "text-appLightGray" : "text-appBlack"
