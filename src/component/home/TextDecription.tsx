@@ -26,30 +26,32 @@ const TextDecription: React.FC<TextDescriptionProps> = ({
   }, [option.description]);
 
   return (
-    <p className="text-xs sm:text-sm flex flex-col gap-1 mb-2">
-      <div
-        ref={textRef}
-        className={`${
-          moreIndex === i ? "" : "line-clamp-5"
-        } opacity-95`}
-        dangerouslySetInnerHTML={{ __html: option.description }}
-      />
-      {isClamped && (moreIndex == i ? (
-        <button
-          onClick={() => setMoreIndex(null)}
-          className="font-medium text-appPrimary cursor-pointer text-end"
-        >
-          See Less
-        </button>
-      ) : (
-        <button
-          onClick={() => setMoreIndex(i)}
-          className="font-medium text-appPrimary cursor-pointer text-end"
-        >
-          See More.....
-        </button>
-      ))}
-    </p>
+    <>
+    
+      <p className="text-xs sm:text-sm flex flex-col gap-1 mb-2 cursor-pointer">
+        <div
+          ref={textRef}
+          className={`${moreIndex === i ? "" : "line-clamp-2"} opacity-95`}
+          dangerouslySetInnerHTML={{ __html: option.description }}
+        />
+        {isClamped &&
+          (moreIndex == i ? (
+            <button
+              onClick={() => setMoreIndex(null)}
+              className="font-medium text-appPrimary cursor-pointer text-end"
+            >
+              See Less
+            </button>
+          ) : (
+            <button
+              onClick={() => setMoreIndex(i)}
+              className="font-medium text-appPrimary cursor-pointer text-end"
+            >
+              See More.....
+            </button>
+          ))}
+      </p>
+    </>
   );
 };
 

@@ -49,6 +49,11 @@ export const learnedData: learnedType[] = [
     type: ["All", "Others"],
   },
   {
+    ...skillData.zod,
+
+    type: ["All", "Front-end"],
+  },
+  {
     ...skillData.springboot,
     type: ["All", "Language", "Backend-end"],
   },

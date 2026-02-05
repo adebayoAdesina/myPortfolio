@@ -7,6 +7,8 @@ import {
   gbetDownloadPage,
   getLinked1,
   getLinked2,
+  maketmasta,
+  maketmasta2,
   okpools1,
   okpools2,
   spaceWebsite1,
@@ -114,6 +116,31 @@ export const projectData: ProjectType[] = [
       skillData.typescript,
       skillData.tailwind,
       skillData.redux,
+      skillData.git,
+    ],
+  },
+  {
+    title: "MaketMasta",
+    description: `
+        <div>
+            <p class="description">
+            I contributed significantly to the frontend development of OKPoolsBet, building responsive user interfaces, optimizing performance, and ensuring a seamless user experience across devices.
+            </p>
+            
+            <p class="description">
+                My role involved collaborating closely with the backend developer to ensure a cohesive and seamless user experience across all components. This project demonstrates my expertise in frontend development, user interface design, and creating engaging web applications.
+                </p>
+        </div>
+    `,
+    image: [maketmasta, maketmasta2],
+    links: {
+      website: "https://maketmasta.com/",
+    },
+    tools: [
+      skillData.react,
+      skillData.typescript,
+      skillData.tailwind,
+      skillData.zod,
       skillData.git,
     ],
   },

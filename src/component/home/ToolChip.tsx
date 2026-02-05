@@ -15,9 +15,9 @@ const ToolChip: React.FC<ToolChipProps> = ({ id, tool }) => {
       key={id}
       className={`${
         theme.isDark ? "bg-appLightGray/[0.25] text-white" : " bg-appLightGray text-appBlack"
-      } text-xs md:text-sm border-none rounded-md px-3 py-1 flex items-center gap-2 italic`}
+      } text-[10px] md:text-xs border-none rounded-md px-3 py-1 flex items-center gap-2 italic`}
     >
-      <Icon icon={tool.icon || ""} className="text-lg  text-appPrimary" />
+      <Icon icon={tool.icon || ""} className="text-md  text-appPrimary" />
       {tool.name}
     </span>
   );
