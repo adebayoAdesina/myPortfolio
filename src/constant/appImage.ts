@@ -35,6 +35,9 @@ import ticTacToe2 from '../assets/image/projects/tic-tac-toe/tic-tac-toe2.png'
 
 import okpools1 from "../assets/image/projects/okpools/screenshot-okpools.png"
 import okpools2 from "../assets/image/projects/okpools/screenshot-okpools2.png"
+
+import maketmasta from "../assets/image/projects/maketmasta/screenshot-1770279035866.png"
+import maketmasta2 from "../assets/image/projects/maketmasta/screenshot-1770279247734.png"
 export {
   coverImage,
   catCup,
@@ -62,5 +65,7 @@ export {
   ticTacToe1,
   ticTacToe2,
   okpools1,
-  okpools2
+  okpools2,
+  maketmasta,
+  maketmasta2
 };

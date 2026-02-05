@@ -31,6 +31,10 @@ export const skillData = {
     icon: "devicon:typescript",
     name: "TypeScript",
   },
+  zod: {
+    icon: "simple-icons:zod",
+    name: "Zod",
+  },
   git: {
     icon: "devicon:git",
     name: "Git",

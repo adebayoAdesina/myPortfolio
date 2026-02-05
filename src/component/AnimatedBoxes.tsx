@@ -68,11 +68,11 @@ const AnimatedBoxes: React.FC = () => {
       style={{ height: "", padding: "50px" }}
       className="w-full xl:container mb-[400px]"
     >
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {projectData.map((option, i) => (
           <div
             key={i}
-            className={`box w-full h-full border-2 border-white/[0.3] shadow-inner rounded-3xl overflow-hidden ${
+            className={`box w-full h-full border-2 border-white/[0.2] shadow-inner rounded-2xl overflow-hidden ${
               theme.isDark == true ? "bg-appBlack text-appWhite" : "bg-white"
             } backdrop-blur-md bg-opacity-45 ${
               i > 0 ? "lg:mt-0 mt-[-100px]" : ""
@@ -85,14 +85,14 @@ const AnimatedBoxes: React.FC = () => {
               className={`flex flex-col ${i % 2 && "flex-col-reverse"} h-fit`}
             >
               <div className={`w-full flex flex-col`}>
-                <div className="flex h-72">
+                <div className="flex min-h-60">
                   <img
                     src={option.image[selectedImages[i]]}
                     alt={option.title}
                     className="h-full object-cover object-[50%_0%] w-full"
                   />
                 </div>
-                <div className="flex gap-1 m-6 justify-center">
+                <div className="flex gap-1 m-3 justify-center">
                   {option.image.map((opt, index) => (
                     <div
                       key={`Image_${index}`}
@@ -108,7 +108,7 @@ const AnimatedBoxes: React.FC = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-full flex flex-col gap-2 justify-center p-6">
+              <div className="w-full flex flex-col gap-2 justify-center p-4">
                 <a
                   href={option.links.website}
                   className={`text-base md:text-xl font-bold ${
@@ -147,14 +147,14 @@ const AnimatedBoxes: React.FC = () => {
                         href={option.links.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`rounded-full border border-x-appTeal w-12 h-12 transform flex justify-center items-center shadow-inner group`}
+                        className={`rounded-full border border-x-appTeal w-10 h-10 transform flex justify-center items-center shadow-inner group`}
                         style={{
                           rotate: `${Math.random() * 180}deg`,
                         }}
                       >
                         <Icon
                           icon="akar-icons:github-fill"
-                          className={`text-3xl ${
+                          className={`text-2xl ${
                             theme.isDark ? "text-white" : "text-appPrimary"
                           } group-hover:scale-150 group-hover:duration-500`}
                         />
@@ -164,24 +164,24 @@ const AnimatedBoxes: React.FC = () => {
                   )}
                   {option.links.website && (
                     <div className="flex items-center gap-2">
-                    <a
-                      href={option.links.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`rounded-full border border-y-appTeal w-11 h-11  transform flex justify-center items-center shadow-inner group`}
-                      style={{
-                        rotate: `${Math.random() * 45}deg`,
-                      }}
-                    >
-                      <Icon
-                        icon="streamline-freehand:worldwide-web-network-www"
-                        className={`text-3xl ${
-                          theme.isDark ? "text-white" : "text-appPrimary"
-                        } group-hover:scale-150 group-hover:duration-500`}
-                      />
-                    </a>
-                    Live link
-                </div>
+                      <a
+                        href={option.links.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`rounded-full border border-y-appTeal w-11 h-11  transform flex justify-center items-center shadow-inner group`}
+                        style={{
+                          rotate: `${Math.random() * 45}deg`,
+                        }}
+                      >
+                        <Icon
+                          icon="streamline-freehand:worldwide-web-network-www"
+                          className={`text-3xl ${
+                            theme.isDark ? "text-white" : "text-appPrimary"
+                          } group-hover:scale-150 group-hover:duration-500`}
+                        />
+                      </a>
+                      Live link
+                    </div>
                   )}
                 </div>
               </div>
